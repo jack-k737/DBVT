@@ -26,7 +26,7 @@ We evaluate DBVT and 9 baselines on three clinical benchmarks under 5-fold cross
 
 ### Viewing Results
 
-Training logs for all experiments are provided in [`lab1/outputs/`](lab1/outputs/). Each `log.txt` records the full training process and final test metrics.
+Training logs for all experiments are provided in [`outputs/`](outputs/). Each `log.txt` records the full training process and final test metrics.
 
 ```
 lab1/outputs/
