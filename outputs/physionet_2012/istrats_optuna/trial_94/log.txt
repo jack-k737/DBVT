@@ -1,0 +1,45 @@
+17/01/2026 02:10:40 >> Trial 94: {'hid_dim': 256, 'num_layers': 3, 'num_heads': 16, 'dropout': 0.13276266833499958, 'attention_dropout': 0.25000080145845965, 'lr': 9.867691400115285e-05, 'train_batch_size': 64, 'grad_clip_norm': 3.0}
+
+17/01/2026 02:10:40 >> Preparing dataset physionet_2012
+17/01/2026 02:10:41 >> Using fold 1/5
+17/01/2026 02:10:41 >> Loaded splits from physionet_2012_5fold.json
+17/01/2026 02:10:42 >> # train, val, test TS: [7673, 1918, 2397]
+17/01/2026 02:10:42 >> pos class weight: 6.0330
+17/01/2026 02:10:42 >> % pos class in train, val, test splits: [0.1422, 0.1283, 0.1544]
+17/01/2026 02:10:42 >> # static features: 8
+17/01/2026 02:10:45 >> # TS variables: 36
+17/01/2026 02:10:51 >> No. of training batches per epoch = 120
+17/01/2026 02:10:51 >> >>> Epoch 1/20
+17/01/2026 02:11:26 >> Epoch 1 completed | Avg Loss: 1.1241
+17/01/2026 02:11:29 >> VAL          Epoch:     1 | AUROC: 0.7610 | AUPRC: 0.3273 | MinRP: 0.3780
+17/01/2026 02:11:29 >> >>> Epoch 2/20
+17/01/2026 02:12:03 >> Epoch 2 completed | Avg Loss: 1.0262
+17/01/2026 02:12:06 >> VAL          Epoch:     2 | AUROC: 0.8131 | AUPRC: 0.4119 | MinRP: 0.4400
+17/01/2026 02:12:06 >> >>> Epoch 3/20
+17/01/2026 02:12:41 >> Epoch 3 completed | Avg Loss: 0.9648
+17/01/2026 02:12:43 >> VAL          Epoch:     3 | AUROC: 0.8339 | AUPRC: 0.4517 | MinRP: 0.4634
+17/01/2026 02:12:43 >> >>> Epoch 4/20
+17/01/2026 02:13:18 >> Epoch 4 completed | Avg Loss: 0.9425
+17/01/2026 02:13:21 >> VAL          Epoch:     4 | AUROC: 0.8328 | AUPRC: 0.4606 | MinRP: 0.4789
+17/01/2026 02:13:21 >> >>> Epoch 5/20
+17/01/2026 02:13:56 >> Epoch 5 completed | Avg Loss: 0.9204
+17/01/2026 02:13:59 >> VAL          Epoch:     5 | AUROC: 0.8260 | AUPRC: 0.4481 | MinRP: 0.4553
+17/01/2026 02:13:59 >> >>> Epoch 6/20
+17/01/2026 02:14:33 >> Epoch 6 completed | Avg Loss: 0.8913
+17/01/2026 02:14:36 >> VAL          Epoch:     6 | AUROC: 0.8517 | AUPRC: 0.5038 | MinRP: 0.5061
+17/01/2026 02:14:36 >> >>> Epoch 7/20
+17/01/2026 02:15:11 >> Epoch 7 completed | Avg Loss: 0.8923
+17/01/2026 02:15:13 >> VAL          Epoch:     7 | AUROC: 0.8555 | AUPRC: 0.4839 | MinRP: 0.4756
+17/01/2026 02:15:13 >> >>> Epoch 8/20
+17/01/2026 02:15:48 >> Epoch 8 completed | Avg Loss: 0.8783
+17/01/2026 02:15:51 >> VAL          Epoch:     8 | AUROC: 0.8526 | AUPRC: 0.4868 | MinRP: 0.4797
+17/01/2026 02:15:51 >> >>> Epoch 9/20
+17/01/2026 02:16:26 >> Epoch 9 completed | Avg Loss: 0.8681
+17/01/2026 02:16:28 >> VAL          Epoch:     9 | AUROC: 0.8547 | AUPRC: 0.4968 | MinRP: 0.5081
+17/01/2026 02:16:28 >> >>> Epoch 10/20
+17/01/2026 02:17:03 >> Epoch 10 completed | Avg Loss: 0.8710
+17/01/2026 02:17:05 >> VAL          Epoch:    10 | AUROC: 0.8584 | AUPRC: 0.4976 | MinRP: 0.5020
+17/01/2026 02:17:05 >> >>> Epoch 11/20
+17/01/2026 02:17:40 >> Epoch 11 completed | Avg Loss: 0.8497
+17/01/2026 02:17:43 >> VAL          Epoch:    11 | AUROC: 0.8557 | AUPRC: 0.5051 | MinRP: 0.4805
+17/01/2026 02:17:43 >> Trial 94 pruned: TrialPruned()

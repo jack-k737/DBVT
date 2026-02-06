@@ -1,0 +1,14 @@
+16/01/2026 17:00:14 >> Trial 8: {'hid_dim': 8, 'query_vector_dim': 6, 'node_emb_dim': 7, 'node_enc_layer': 3, 'rarity_alpha': 0.8742998714996284, 'lr': 0.005, 'train_batch_size': 256, 'grad_clip_norm': 3.0}
+
+16/01/2026 17:00:14 >> Preparing dataset physionet_2012
+16/01/2026 17:00:14 >> Using fold 1/5
+16/01/2026 17:00:14 >> Loaded splits from physionet_2012_5fold.json
+16/01/2026 17:00:15 >> # train, val, test TS: [7673, 1918, 2397]
+16/01/2026 17:00:15 >> pos class weight: 6.0330
+16/01/2026 17:00:15 >> % pos class in train, val, test splits: [0.1422, 0.1283, 0.1544]
+16/01/2026 17:00:15 >> # static features: 8
+16/01/2026 17:00:16 >> # TS variables: 36
+16/01/2026 17:00:17 >> # intervals (hours): 49
+16/01/2026 17:00:24 >> No. of training batches per epoch = 30
+16/01/2026 17:00:24 >> >>> Epoch 1/20
+16/01/2026 17:00:31 >> Epoch 1 completed | Avg Loss: 0.5667

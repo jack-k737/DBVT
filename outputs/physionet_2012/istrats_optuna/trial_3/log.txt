@@ -1,0 +1,21 @@
+16/01/2026 16:59:02 >> Trial 3: {'hid_dim': 256, 'num_layers': 3, 'num_heads': 8, 'dropout': 0.1940957315323235, 'attention_dropout': 0.28220340548291345, 'lr': 2.1697757495528423e-05, 'train_batch_size': 32, 'grad_clip_norm': 5.0}
+
+16/01/2026 16:59:02 >> Preparing dataset physionet_2012
+16/01/2026 16:59:02 >> Using fold 1/5
+16/01/2026 16:59:02 >> Loaded splits from physionet_2012_5fold.json
+16/01/2026 16:59:03 >> # train, val, test TS: [7673, 1918, 2397]
+16/01/2026 16:59:03 >> pos class weight: 6.0330
+16/01/2026 16:59:03 >> % pos class in train, val, test splits: [0.1422, 0.1283, 0.1544]
+16/01/2026 16:59:04 >> # static features: 8
+16/01/2026 16:59:06 >> # TS variables: 36
+16/01/2026 16:59:12 >> No. of training batches per epoch = 240
+16/01/2026 16:59:12 >> >>> Epoch 1/20
+16/01/2026 16:59:31 >> Epoch 1 completed | Avg Loss: 1.1755
+16/01/2026 16:59:33 >> VAL          Epoch:     1 | AUROC: 0.6790 | AUPRC: 0.2427 | MinRP: 0.3031
+16/01/2026 16:59:33 >> >>> Epoch 2/20
+16/01/2026 16:59:51 >> Epoch 2 completed | Avg Loss: 1.1303
+16/01/2026 16:59:53 >> VAL          Epoch:     2 | AUROC: 0.7286 | AUPRC: 0.3208 | MinRP: 0.3475
+16/01/2026 16:59:53 >> >>> Epoch 3/20
+16/01/2026 17:00:12 >> Epoch 3 completed | Avg Loss: 1.0881
+16/01/2026 17:00:13 >> VAL          Epoch:     3 | AUROC: 0.7545 | AUPRC: 0.3407 | MinRP: 0.3800
+16/01/2026 17:00:13 >> >>> Epoch 4/20

@@ -1,0 +1,10 @@
+
+27/01/2026 16:07:04 >> Preparing dataset mimic_iii
+27/01/2026 16:07:08 >> Using fold 1/5
+27/01/2026 16:07:08 >> Loaded splits from mimic_iii_5fold.json
+27/01/2026 16:07:33 >> # train, val, test TS: [33817, 8471, 10583]
+27/01/2026 16:07:53 >> pos class weight: 7.1487
+27/01/2026 16:07:53 >> % pos class in train, val, test splits: [0.1227, 0.1277, 0.1204]
+27/01/2026 16:07:55 >> # static features: 3
+27/01/2026 16:07:56 >> # TS variables: 127
+27/01/2026 16:08:03 >> # intervals (hours): 25

@@ -1,0 +1,33 @@
+18/01/2026 18:49:43 >> Trial 66: {'hid_dim': 64, 'r_hid': 2, 'dropout': 0.09384128792100077, 'down_mode': 'concat', 'ratios': [4, 4, 4, 4], 'lr': 0.000359037816913804, 'train_batch_size': 32, 'grad_clip_norm': 1.0}
+
+18/01/2026 18:49:43 >> Preparing dataset physionet_2019
+18/01/2026 18:49:43 >> Using fold 1/5
+18/01/2026 18:49:43 >> Loaded splits from physionet_2019_5fold.json
+18/01/2026 18:49:45 >> # train, val, test TS: [24688, 6172, 7715]
+18/01/2026 18:49:45 >> pos class weight: 26.3703
+18/01/2026 18:49:45 >> % pos class in train, val, test splits: [0.0365, 0.0405, 0.0377]
+18/01/2026 18:49:46 >> # static features: 5
+18/01/2026 18:49:52 >> # TS variables: 34
+18/01/2026 18:50:16 >> No. of training batches per epoch = 772
+18/01/2026 18:50:16 >> >>> Epoch 1/20
+18/01/2026 18:51:13 >> Epoch 1 completed | Avg Loss: 1.2557
+18/01/2026 18:51:19 >> VAL          Epoch:     1 | AUROC: 0.8266 | AUPRC: 0.3272 | MinRP: 0.3800
+18/01/2026 18:51:19 >> >>> Epoch 2/20
+18/01/2026 18:52:17 >> Epoch 2 completed | Avg Loss: 1.2747
+18/01/2026 18:52:23 >> VAL          Epoch:     2 | AUROC: 0.8447 | AUPRC: 0.3974 | MinRP: 0.4444
+18/01/2026 18:52:23 >> >>> Epoch 3/20
+18/01/2026 18:53:21 >> Epoch 3 completed | Avg Loss: 1.2294
+18/01/2026 18:53:27 >> VAL          Epoch:     3 | AUROC: 0.8482 | AUPRC: 0.4434 | MinRP: 0.4800
+18/01/2026 18:53:27 >> >>> Epoch 4/20
+18/01/2026 18:54:25 >> Epoch 4 completed | Avg Loss: 1.1875
+18/01/2026 18:54:31 >> VAL          Epoch:     4 | AUROC: 0.8511 | AUPRC: 0.4587 | MinRP: 0.4667
+18/01/2026 18:54:31 >> >>> Epoch 5/20
+18/01/2026 18:55:28 >> Epoch 5 completed | Avg Loss: 1.1341
+18/01/2026 18:55:35 >> VAL          Epoch:     5 | AUROC: 0.8593 | AUPRC: 0.4591 | MinRP: 0.4720
+18/01/2026 18:55:35 >> >>> Epoch 6/20
+18/01/2026 18:56:34 >> Epoch 6 completed | Avg Loss: 1.1409
+18/01/2026 18:56:41 >> VAL          Epoch:     6 | AUROC: 0.8616 | AUPRC: 0.4587 | MinRP: 0.4783
+18/01/2026 18:56:41 >> >>> Epoch 7/20
+18/01/2026 18:57:39 >> Epoch 7 completed | Avg Loss: 1.1396
+18/01/2026 18:57:45 >> VAL          Epoch:     7 | AUROC: 0.8660 | AUPRC: 0.4791 | MinRP: 0.4880
+18/01/2026 18:57:45 >> Trial 66 pruned: TrialPruned()

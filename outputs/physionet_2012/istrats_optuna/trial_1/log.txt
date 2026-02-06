@@ -1,0 +1,72 @@
+16/01/2026 16:50:55 >> Trial 1: {'hid_dim': 32, 'num_layers': 3, 'num_heads': 4, 'dropout': 0.28818045864514164, 'attention_dropout': 0.23651549663458488, 'lr': 0.0005738076294120294, 'train_batch_size': 16, 'grad_clip_norm': 3.0}
+
+16/01/2026 16:50:55 >> Preparing dataset physionet_2012
+16/01/2026 16:50:56 >> Using fold 1/5
+16/01/2026 16:50:56 >> Loaded splits from physionet_2012_5fold.json
+16/01/2026 16:50:56 >> # train, val, test TS: [7673, 1918, 2397]
+16/01/2026 16:50:57 >> pos class weight: 6.0330
+16/01/2026 16:50:57 >> % pos class in train, val, test splits: [0.1422, 0.1283, 0.1544]
+16/01/2026 16:50:57 >> # static features: 8
+16/01/2026 16:50:59 >> # TS variables: 36
+16/01/2026 16:51:05 >> No. of training batches per epoch = 480
+16/01/2026 16:51:05 >> >>> Epoch 1/20
+16/01/2026 16:51:16 >> Epoch 1 completed | Avg Loss: 1.1552
+16/01/2026 16:51:17 >> VAL          Epoch:     1 | AUROC: 0.7350 | AUPRC: 0.2695 | MinRP: 0.3169
+16/01/2026 16:51:17 >> >>> Epoch 2/20
+16/01/2026 16:51:27 >> Epoch 2 completed | Avg Loss: 1.0853
+16/01/2026 16:51:28 >> VAL          Epoch:     2 | AUROC: 0.7686 | AUPRC: 0.3863 | MinRP: 0.4309
+16/01/2026 16:51:28 >> >>> Epoch 3/20
+16/01/2026 16:51:38 >> Epoch 3 completed | Avg Loss: 1.0332
+16/01/2026 16:51:39 >> VAL          Epoch:     3 | AUROC: 0.7973 | AUPRC: 0.3879 | MinRP: 0.4291
+16/01/2026 16:51:39 >> >>> Epoch 4/20
+16/01/2026 16:51:50 >> Epoch 4 completed | Avg Loss: 0.9943
+16/01/2026 16:51:51 >> VAL          Epoch:     4 | AUROC: 0.7862 | AUPRC: 0.4038 | MinRP: 0.4332
+16/01/2026 16:51:51 >> >>> Epoch 5/20
+16/01/2026 16:52:01 >> Epoch 5 completed | Avg Loss: 1.0000
+16/01/2026 16:52:02 >> VAL          Epoch:     5 | AUROC: 0.8037 | AUPRC: 0.4356 | MinRP: 0.4472
+16/01/2026 16:52:02 >> >>> Epoch 6/20
+16/01/2026 16:52:12 >> Epoch 6 completed | Avg Loss: 0.9802
+16/01/2026 16:52:13 >> VAL          Epoch:     6 | AUROC: 0.8122 | AUPRC: 0.4193 | MinRP: 0.4534
+16/01/2026 16:52:13 >> >>> Epoch 7/20
+16/01/2026 16:52:23 >> Epoch 7 completed | Avg Loss: 0.9713
+16/01/2026 16:52:24 >> VAL          Epoch:     7 | AUROC: 0.8277 | AUPRC: 0.4341 | MinRP: 0.4559
+16/01/2026 16:52:24 >> >>> Epoch 8/20
+16/01/2026 16:52:34 >> Epoch 8 completed | Avg Loss: 0.9593
+16/01/2026 16:52:35 >> VAL          Epoch:     8 | AUROC: 0.8256 | AUPRC: 0.4353 | MinRP: 0.4781
+16/01/2026 16:52:35 >> >>> Epoch 9/20
+16/01/2026 16:52:45 >> Epoch 9 completed | Avg Loss: 0.9488
+16/01/2026 16:52:46 >> VAL          Epoch:     9 | AUROC: 0.8252 | AUPRC: 0.4371 | MinRP: 0.4777
+16/01/2026 16:52:46 >> >>> Epoch 10/20
+16/01/2026 16:52:58 >> Epoch 10 completed | Avg Loss: 0.9525
+16/01/2026 16:52:58 >> VAL          Epoch:    10 | AUROC: 0.8312 | AUPRC: 0.4403 | MinRP: 0.4758
+16/01/2026 16:52:58 >> >>> Epoch 11/20
+16/01/2026 16:53:09 >> Epoch 11 completed | Avg Loss: 0.9301
+16/01/2026 16:53:10 >> VAL          Epoch:    11 | AUROC: 0.8201 | AUPRC: 0.4282 | MinRP: 0.4153
+16/01/2026 16:53:10 >> >>> Epoch 12/20
+16/01/2026 16:53:20 >> Epoch 12 completed | Avg Loss: 0.9352
+16/01/2026 16:53:21 >> VAL          Epoch:    12 | AUROC: 0.8279 | AUPRC: 0.4351 | MinRP: 0.4269
+16/01/2026 16:53:21 >> >>> Epoch 13/20
+16/01/2026 16:53:31 >> Epoch 13 completed | Avg Loss: 0.9440
+16/01/2026 16:53:32 >> VAL          Epoch:    13 | AUROC: 0.8285 | AUPRC: 0.4250 | MinRP: 0.4257
+16/01/2026 16:53:32 >> >>> Epoch 14/20
+16/01/2026 16:53:42 >> Epoch 14 completed | Avg Loss: 0.9292
+16/01/2026 16:53:43 >> VAL          Epoch:    14 | AUROC: 0.8377 | AUPRC: 0.4431 | MinRP: 0.4664
+16/01/2026 16:53:43 >> >>> Epoch 15/20
+16/01/2026 16:53:53 >> Epoch 15 completed | Avg Loss: 0.9183
+16/01/2026 16:53:54 >> VAL          Epoch:    15 | AUROC: 0.8394 | AUPRC: 0.4515 | MinRP: 0.4651
+16/01/2026 16:53:54 >> >>> Epoch 16/20
+16/01/2026 16:54:04 >> Epoch 16 completed | Avg Loss: 0.9263
+16/01/2026 16:54:05 >> VAL          Epoch:    16 | AUROC: 0.8353 | AUPRC: 0.4531 | MinRP: 0.4593
+16/01/2026 16:54:05 >> >>> Epoch 17/20
+16/01/2026 16:54:15 >> Epoch 17 completed | Avg Loss: 0.9103
+16/01/2026 16:54:16 >> VAL          Epoch:    17 | AUROC: 0.8443 | AUPRC: 0.4324 | MinRP: 0.4675
+16/01/2026 16:54:16 >> >>> Epoch 18/20
+16/01/2026 16:54:26 >> Epoch 18 completed | Avg Loss: 0.9134
+16/01/2026 16:54:27 >> VAL          Epoch:    18 | AUROC: 0.8474 | AUPRC: 0.4431 | MinRP: 0.4797
+16/01/2026 16:54:27 >> >>> Epoch 19/20
+16/01/2026 16:54:37 >> Epoch 19 completed | Avg Loss: 0.9188
+16/01/2026 16:54:38 >> VAL          Epoch:    19 | AUROC: 0.8457 | AUPRC: 0.4473 | MinRP: 0.4715
+16/01/2026 16:54:38 >> >>> Epoch 20/20
+16/01/2026 16:54:48 >> Epoch 20 completed | Avg Loss: 0.8996
+16/01/2026 16:54:49 >> VAL          Epoch:    20 | AUROC: 0.8482 | AUPRC: 0.4585 | MinRP: 0.4680
+16/01/2026 16:54:50 >> Trial 1 completed with metric: 0.4585

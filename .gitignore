@@ -15,7 +15,7 @@ build/
 .ipynb_checkpoints/
 
 # 训练 / 实验产出（不传 GitHub）
-/outputs/
+
 lab/outputs/
 lab/outputs copy/
 lab1/outputs copy/

@@ -1,0 +1,151 @@
+19/01/2026 16:00:33 >> Namespace(dataset='physionet_2019', model_type='raindrop', split_file='physionet_2019_5fold.json', fold=4, root_dir='/home/xiejun/codeLib/miccai', output_dir='../outputs/physionet_2019/raindrop|fold:4', lr=0.0001, train_batch_size=32, eval_batch_size=64, max_epochs=20, patience=5, validate_every=None, grad_clip_norm=1.0, max_obs=880, max_timesteps=880, device='cuda:3', seed=2026, hid_dim=256, num_layers=2, num_heads=16, dropout=0.1, logger=<utils.logger.Logger object at 0x7a8641c1e140>)
+
+19/01/2026 16:00:33 >> Preparing dataset physionet_2019
+19/01/2026 16:00:34 >> Using fold 4/5
+19/01/2026 16:00:34 >> Loaded splits from physionet_2019_5fold.json
+19/01/2026 16:00:36 >> # train, val, test TS: [24688, 6172, 7715]
+19/01/2026 16:00:37 >> pos class weight: 26.5229
+19/01/2026 16:00:37 >> % pos class in train, val, test splits: [0.0363, 0.0413, 0.0377]
+19/01/2026 16:00:37 >> # static features: 5
+19/01/2026 16:00:38 >> # TS variables: 34
+19/01/2026 16:00:41 >> # timesteps (Raindrop): 61
+
+19/01/2026 16:00:52 >> Model details:
+19/01/2026 16:00:52 >> # parameters: 5928246
+19/01/2026 16:00:52 >> # trainable parameters: 5928246, 100.0%
+19/01/2026 16:00:52 >> #params by dtype:
+19/01/2026 16:00:52 >> torch.float32: 5928246, 100.0%
+
+19/01/2026 16:00:52 >> No. of training batches per epoch = 772
+
+19/01/2026 16:00:52 >> ============================================================
+19/01/2026 16:00:52 >>                Starting training...
+19/01/2026 16:00:52 >> ============================================================
+19/01/2026 16:00:52 >> >>> Epoch 1/20
+19/01/2026 16:01:36 >> Epoch 1 completed | Avg Loss: 0.6215
+19/01/2026 16:01:38 >> EVAL_TRAIN   Epoch:     1 | AUROC: 0.6867 | AUPRC: 0.2556 | MinRP: 0.3875
+19/01/2026 16:01:43 >> VAL          Epoch:     1 | AUROC: 0.7110 | AUPRC: 0.2694 | MinRP: 0.3256
+19/01/2026 16:01:43 >> AUPRC improved: 0.0000 ---> 0.2694 (+0.2694)
+19/01/2026 16:01:43 >> Saving checkpoint to ../outputs/physionet_2019/raindrop|fold:4/checkpoint_best.bin
+19/01/2026 16:01:43 >> ============================================================
+19/01/2026 16:01:43 >> >>> Epoch 2/20
+19/01/2026 16:02:27 >> Epoch 2 completed | Avg Loss: 0.5635
+19/01/2026 16:02:28 >> EVAL_TRAIN   Epoch:     2 | AUROC: 0.7629 | AUPRC: 0.2805 | MinRP: 0.4125
+19/01/2026 16:02:34 >> VAL          Epoch:     2 | AUROC: 0.7818 | AUPRC: 0.2954 | MinRP: 0.3569
+19/01/2026 16:02:34 >> AUPRC improved: 0.2694 ---> 0.2954 (+0.0260)
+19/01/2026 16:02:34 >> Saving checkpoint to ../outputs/physionet_2019/raindrop|fold:4/checkpoint_best.bin
+19/01/2026 16:02:34 >> ============================================================
+19/01/2026 16:02:34 >> >>> Epoch 3/20
+19/01/2026 16:03:18 >> Epoch 3 completed | Avg Loss: 0.5346
+19/01/2026 16:03:20 >> EVAL_TRAIN   Epoch:     3 | AUROC: 0.8058 | AUPRC: 0.2999 | MinRP: 0.4125
+19/01/2026 16:03:26 >> VAL          Epoch:     3 | AUROC: 0.8083 | AUPRC: 0.3143 | MinRP: 0.3867
+19/01/2026 16:03:26 >> AUPRC improved: 0.2954 ---> 0.3143 (+0.0189)
+19/01/2026 16:03:26 >> Saving checkpoint to ../outputs/physionet_2019/raindrop|fold:4/checkpoint_best.bin
+19/01/2026 16:03:26 >> ============================================================
+19/01/2026 16:03:26 >> >>> Epoch 4/20
+19/01/2026 16:04:10 >> Epoch 4 completed | Avg Loss: 0.5397
+19/01/2026 16:04:12 >> EVAL_TRAIN   Epoch:     4 | AUROC: 0.8170 | AUPRC: 0.2984 | MinRP: 0.4125
+19/01/2026 16:04:18 >> VAL          Epoch:     4 | AUROC: 0.8178 | AUPRC: 0.3246 | MinRP: 0.3882
+19/01/2026 16:04:18 >> AUPRC improved: 0.3143 ---> 0.3246 (+0.0103)
+19/01/2026 16:04:18 >> Saving checkpoint to ../outputs/physionet_2019/raindrop|fold:4/checkpoint_best.bin
+19/01/2026 16:04:18 >> ============================================================
+19/01/2026 16:04:18 >> >>> Epoch 5/20
+19/01/2026 16:05:03 >> Epoch 5 completed | Avg Loss: 0.5214
+19/01/2026 16:05:05 >> EVAL_TRAIN   Epoch:     5 | AUROC: 0.8324 | AUPRC: 0.3375 | MinRP: 0.4250
+19/01/2026 16:05:11 >> VAL          Epoch:     5 | AUROC: 0.8287 | AUPRC: 0.3474 | MinRP: 0.4078
+19/01/2026 16:05:11 >> AUPRC improved: 0.3246 ---> 0.3474 (+0.0228)
+19/01/2026 16:05:11 >> Saving checkpoint to ../outputs/physionet_2019/raindrop|fold:4/checkpoint_best.bin
+19/01/2026 16:05:11 >> ============================================================
+19/01/2026 16:05:11 >> >>> Epoch 6/20
+19/01/2026 16:05:56 >> Epoch 6 completed | Avg Loss: 0.5155
+19/01/2026 16:05:58 >> EVAL_TRAIN   Epoch:     6 | AUROC: 0.8286 | AUPRC: 0.3310 | MinRP: 0.4250
+19/01/2026 16:06:04 >> VAL          Epoch:     6 | AUROC: 0.8287 | AUPRC: 0.3564 | MinRP: 0.4196
+19/01/2026 16:06:04 >> AUPRC improved: 0.3474 ---> 0.3564 (+0.0090)
+19/01/2026 16:06:04 >> Saving checkpoint to ../outputs/physionet_2019/raindrop|fold:4/checkpoint_best.bin
+19/01/2026 16:06:04 >> ============================================================
+19/01/2026 16:06:04 >> >>> Epoch 7/20
+19/01/2026 16:06:49 >> Epoch 7 completed | Avg Loss: 0.5164
+19/01/2026 16:06:51 >> EVAL_TRAIN   Epoch:     7 | AUROC: 0.8454 | AUPRC: 0.3298 | MinRP: 0.4125
+19/01/2026 16:06:57 >> VAL          Epoch:     7 | AUROC: 0.8346 | AUPRC: 0.3624 | MinRP: 0.4235
+19/01/2026 16:06:57 >> AUPRC improved: 0.3564 ---> 0.3624 (+0.0059)
+19/01/2026 16:06:57 >> Saving checkpoint to ../outputs/physionet_2019/raindrop|fold:4/checkpoint_best.bin
+19/01/2026 16:06:57 >> ============================================================
+19/01/2026 16:06:57 >> >>> Epoch 8/20
+19/01/2026 16:07:41 >> Epoch 8 completed | Avg Loss: 0.5094
+19/01/2026 16:07:43 >> EVAL_TRAIN   Epoch:     8 | AUROC: 0.8521 | AUPRC: 0.3674 | MinRP: 0.4250
+19/01/2026 16:07:49 >> VAL          Epoch:     8 | AUROC: 0.8342 | AUPRC: 0.3735 | MinRP: 0.4275
+19/01/2026 16:07:49 >> AUPRC improved: 0.3624 ---> 0.3735 (+0.0111)
+19/01/2026 16:07:49 >> Saving checkpoint to ../outputs/physionet_2019/raindrop|fold:4/checkpoint_best.bin
+19/01/2026 16:07:49 >> ============================================================
+19/01/2026 16:07:49 >> >>> Epoch 9/20
+19/01/2026 16:08:33 >> Epoch 9 completed | Avg Loss: 0.5143
+19/01/2026 16:08:35 >> EVAL_TRAIN   Epoch:     9 | AUROC: 0.8572 | AUPRC: 0.4152 | MinRP: 0.4091
+19/01/2026 16:08:40 >> VAL          Epoch:     9 | AUROC: 0.8353 | AUPRC: 0.3954 | MinRP: 0.4258
+19/01/2026 16:08:40 >> AUPRC improved: 0.3735 ---> 0.3954 (+0.0219)
+19/01/2026 16:08:40 >> Saving checkpoint to ../outputs/physionet_2019/raindrop|fold:4/checkpoint_best.bin
+19/01/2026 16:08:41 >> ============================================================
+19/01/2026 16:08:41 >> >>> Epoch 10/20
+19/01/2026 16:09:25 >> Epoch 10 completed | Avg Loss: 0.5054
+19/01/2026 16:09:27 >> EVAL_TRAIN   Epoch:    10 | AUROC: 0.8680 | AUPRC: 0.4509 | MinRP: 0.4125
+19/01/2026 16:09:32 >> VAL          Epoch:    10 | AUROC: 0.8437 | AUPRC: 0.4400 | MinRP: 0.4436
+19/01/2026 16:09:32 >> AUPRC improved: 0.3954 ---> 0.4400 (+0.0446)
+19/01/2026 16:09:32 >> Saving checkpoint to ../outputs/physionet_2019/raindrop|fold:4/checkpoint_best.bin
+19/01/2026 16:09:32 >> ============================================================
+19/01/2026 16:09:32 >> >>> Epoch 11/20
+19/01/2026 16:10:17 >> Epoch 11 completed | Avg Loss: 0.4971
+19/01/2026 16:10:18 >> EVAL_TRAIN   Epoch:    11 | AUROC: 0.8616 | AUPRC: 0.4541 | MinRP: 0.4375
+19/01/2026 16:10:24 >> VAL          Epoch:    11 | AUROC: 0.8356 | AUPRC: 0.4293 | MinRP: 0.4196
+19/01/2026 16:10:24 >> No improvement. Wait: 4/5
+19/01/2026 16:10:24 >> ============================================================
+19/01/2026 16:10:24 >> >>> Epoch 12/20
+19/01/2026 16:11:08 >> Epoch 12 completed | Avg Loss: 0.4985
+19/01/2026 16:11:10 >> EVAL_TRAIN   Epoch:    12 | AUROC: 0.8817 | AUPRC: 0.4738 | MinRP: 0.4375
+19/01/2026 16:11:15 >> VAL          Epoch:    12 | AUROC: 0.8444 | AUPRC: 0.4287 | MinRP: 0.4247
+19/01/2026 16:11:15 >> No improvement. Wait: 3/5
+19/01/2026 16:11:15 >> ============================================================
+19/01/2026 16:11:15 >> >>> Epoch 13/20
+19/01/2026 16:12:02 >> Epoch 13 completed | Avg Loss: 0.5016
+19/01/2026 16:12:03 >> EVAL_TRAIN   Epoch:    13 | AUROC: 0.8914 | AUPRC: 0.4630 | MinRP: 0.4524
+19/01/2026 16:12:09 >> VAL          Epoch:    13 | AUROC: 0.8354 | AUPRC: 0.4337 | MinRP: 0.4358
+19/01/2026 16:12:09 >> No improvement. Wait: 2/5
+19/01/2026 16:12:09 >> ============================================================
+19/01/2026 16:12:09 >> >>> Epoch 14/20
+19/01/2026 16:12:57 >> Epoch 14 completed | Avg Loss: 0.4874
+19/01/2026 16:12:59 >> EVAL_TRAIN   Epoch:    14 | AUROC: 0.8909 | AUPRC: 0.5025 | MinRP: 0.4881
+19/01/2026 16:13:05 >> VAL          Epoch:    14 | AUROC: 0.8420 | AUPRC: 0.4337 | MinRP: 0.4319
+19/01/2026 16:13:05 >> No improvement. Wait: 1/5
+19/01/2026 16:13:05 >> ============================================================
+19/01/2026 16:13:05 >> >>> Epoch 15/20
+19/01/2026 16:13:50 >> Epoch 15 completed | Avg Loss: 0.4889
+19/01/2026 16:13:51 >> EVAL_TRAIN   Epoch:    15 | AUROC: 0.8995 | AUPRC: 0.5095 | MinRP: 0.5125
+19/01/2026 16:13:57 >> VAL          Epoch:    15 | AUROC: 0.8327 | AUPRC: 0.4251 | MinRP: 0.4392
+19/01/2026 16:13:57 >> No improvement. Wait: 0/5
+19/01/2026 16:13:57 >> Patience reached. Early stopping.
+
+19/01/2026 16:13:57 >> ============================================================
+19/01/2026 16:13:57 >> TRAINING COMPLETED
+19/01/2026 16:13:57 >> ============================================================
+19/01/2026 16:13:57 >> Best Validation Results:
+19/01/2026 16:13:57 >>   AUROC: 0.8437 | AUPRC: 0.4400 | MinRP: 0.4436
+19/01/2026 16:13:57 >> Loading best model from ../outputs/physionet_2019/raindrop|fold:4/checkpoint_best.bin
+19/01/2026 16:13:57 >> Evaluating on test set...
+19/01/2026 16:14:04 >> TEST         AUROC: 0.8392 | AUPRC: 0.3747 | MinRP: 0.4055 | Accuracy: 0.8353
+
+19/01/2026 16:14:04 >> ============================================================
+19/01/2026 16:14:04 >> Classification Report:
+19/01/2026 16:14:04 >>               precision    recall  f1-score   support
+19/01/2026 16:14:04 >> 
+19/01/2026 16:14:04 >>          0.0     0.9847    0.8419    0.9077      7424
+19/01/2026 16:14:04 >>          1.0     0.1418    0.6667    0.2339       291
+19/01/2026 16:14:04 >> 
+19/01/2026 16:14:04 >>     accuracy                         0.8353      7715
+19/01/2026 16:14:04 >>    macro avg     0.5633    0.7543    0.5708      7715
+19/01/2026 16:14:04 >> weighted avg     0.9529    0.8353    0.8823      7715
+19/01/2026 16:14:04 >> 
+19/01/2026 16:14:04 >> Confusion Matrix:
+19/01/2026 16:14:04 >> [6250, 1174]
+19/01/2026 16:14:04 >> [97, 194]
+19/01/2026 16:14:04 >> ============================================================
+19/01/2026 16:14:04 >> Final Test Results:
+19/01/2026 16:14:04 >>   AUROC: 0.8392 | AUPRC: 0.3747 | MinRP: 0.4055 | Accuracy: 0.8353
+19/01/2026 16:14:04 >> ============================================================

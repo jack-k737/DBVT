@@ -1,0 +1,160 @@
+22/01/2026 18:23:08 >> Namespace(dataset='mimic_iii', model_type='strats', split_file='mimic_iii_5fold.json', fold=3, root_dir='/home/xiejun/codeLib/miccai', output_dir='../outputs/mimic_iii/strats|fold:3', lr=0.0005, train_batch_size=32, eval_batch_size=64, max_epochs=20, patience=5, validate_every=None, grad_clip_norm=0.3, max_obs=880, max_timesteps=880, device='cuda:3', seed=2026, hid_dim=64, num_layers=2, num_heads=16, dropout=0.2, attention_dropout=0.2, logger=<utils.logger.Logger object at 0x74587021e140>)
+
+22/01/2026 18:23:08 >> Preparing dataset mimic_iii
+22/01/2026 18:23:12 >> Using fold 3/5
+22/01/2026 18:23:12 >> Loaded splits from mimic_iii_5fold.json
+22/01/2026 18:23:38 >> # train, val, test TS: [33866, 8436, 10569]
+22/01/2026 18:23:59 >> pos class weight: 7.0423
+22/01/2026 18:23:59 >> % pos class in train, val, test splits: [0.1243, 0.1193, 0.1220]
+22/01/2026 18:24:00 >> # static features: 3
+22/01/2026 18:24:11 >> # TS variables: 127
+
+22/01/2026 18:24:35 >> Model details:
+22/01/2026 18:24:35 >> # parameters: 88225
+22/01/2026 18:24:35 >> # trainable parameters: 88225, 100.0%
+22/01/2026 18:24:35 >> #params by dtype:
+22/01/2026 18:24:35 >> torch.float32: 88225, 100.0%
+
+22/01/2026 18:24:35 >> No. of training batches per epoch = 1059
+
+22/01/2026 18:24:35 >> ============================================================
+22/01/2026 18:24:35 >>                Starting training...
+22/01/2026 18:24:35 >> ============================================================
+22/01/2026 18:24:35 >> >>> Epoch 1/20
+22/01/2026 18:26:25 >> Epoch 1 completed | Avg Loss: 0.8683
+22/01/2026 18:26:27 >> EVAL_TRAIN   Epoch:     1 | AUROC: 0.9079 | AUPRC: 0.6007 | MinRP: 0.5593
+22/01/2026 18:26:35 >> VAL          Epoch:     1 | AUROC: 0.8891 | AUPRC: 0.5942 | MinRP: 0.5517
+22/01/2026 18:26:35 >> AUPRC improved: 0.0000 ---> 0.5942 (+0.5942)
+22/01/2026 18:26:35 >> Saving checkpoint to ../outputs/mimic_iii/strats|fold:3/checkpoint_best.bin
+22/01/2026 18:26:35 >> ============================================================
+22/01/2026 18:26:35 >> >>> Epoch 2/20
+22/01/2026 18:28:26 >> Epoch 2 completed | Avg Loss: 0.7842
+22/01/2026 18:28:28 >> EVAL_TRAIN   Epoch:     2 | AUROC: 0.9172 | AUPRC: 0.6508 | MinRP: 0.5882
+22/01/2026 18:28:36 >> VAL          Epoch:     2 | AUROC: 0.8973 | AUPRC: 0.6374 | MinRP: 0.5795
+22/01/2026 18:28:36 >> AUPRC improved: 0.5942 ---> 0.6374 (+0.0432)
+22/01/2026 18:28:36 >> Saving checkpoint to ../outputs/mimic_iii/strats|fold:3/checkpoint_best.bin
+22/01/2026 18:28:36 >> ============================================================
+22/01/2026 18:28:36 >> >>> Epoch 3/20
+22/01/2026 18:30:26 >> Epoch 3 completed | Avg Loss: 0.7611
+22/01/2026 18:30:28 >> EVAL_TRAIN   Epoch:     3 | AUROC: 0.9215 | AUPRC: 0.6653 | MinRP: 0.5872
+22/01/2026 18:30:36 >> VAL          Epoch:     3 | AUROC: 0.9018 | AUPRC: 0.6436 | MinRP: 0.5791
+22/01/2026 18:30:36 >> AUPRC improved: 0.6374 ---> 0.6436 (+0.0063)
+22/01/2026 18:30:36 >> Saving checkpoint to ../outputs/mimic_iii/strats|fold:3/checkpoint_best.bin
+22/01/2026 18:30:36 >> ============================================================
+22/01/2026 18:30:36 >> >>> Epoch 4/20
+22/01/2026 18:32:25 >> Epoch 4 completed | Avg Loss: 0.7459
+22/01/2026 18:32:27 >> EVAL_TRAIN   Epoch:     4 | AUROC: 0.9209 | AUPRC: 0.6611 | MinRP: 0.5872
+22/01/2026 18:32:36 >> VAL          Epoch:     4 | AUROC: 0.9029 | AUPRC: 0.6410 | MinRP: 0.5776
+22/01/2026 18:32:36 >> No improvement. Wait: 4/5
+22/01/2026 18:32:36 >> ============================================================
+22/01/2026 18:32:36 >> >>> Epoch 5/20
+22/01/2026 18:34:25 >> Epoch 5 completed | Avg Loss: 0.7295
+22/01/2026 18:34:27 >> EVAL_TRAIN   Epoch:     5 | AUROC: 0.9224 | AUPRC: 0.6696 | MinRP: 0.5858
+22/01/2026 18:34:35 >> VAL          Epoch:     5 | AUROC: 0.9039 | AUPRC: 0.6549 | MinRP: 0.5915
+22/01/2026 18:34:35 >> AUPRC improved: 0.6436 ---> 0.6549 (+0.0113)
+22/01/2026 18:34:35 >> Saving checkpoint to ../outputs/mimic_iii/strats|fold:3/checkpoint_best.bin
+22/01/2026 18:34:35 >> ============================================================
+22/01/2026 18:34:35 >> >>> Epoch 6/20
+22/01/2026 18:36:24 >> Epoch 6 completed | Avg Loss: 0.7329
+22/01/2026 18:36:25 >> EVAL_TRAIN   Epoch:     6 | AUROC: 0.9238 | AUPRC: 0.6772 | MinRP: 0.5872
+22/01/2026 18:36:34 >> VAL          Epoch:     6 | AUROC: 0.9031 | AUPRC: 0.6464 | MinRP: 0.5881
+22/01/2026 18:36:34 >> No improvement. Wait: 4/5
+22/01/2026 18:36:34 >> ============================================================
+22/01/2026 18:36:34 >> >>> Epoch 7/20
+22/01/2026 18:38:22 >> Epoch 7 completed | Avg Loss: 0.7292
+22/01/2026 18:38:24 >> EVAL_TRAIN   Epoch:     7 | AUROC: 0.9275 | AUPRC: 0.6854 | MinRP: 0.6000
+22/01/2026 18:38:33 >> VAL          Epoch:     7 | AUROC: 0.9070 | AUPRC: 0.6565 | MinRP: 0.5895
+22/01/2026 18:38:33 >> AUPRC improved: 0.6549 ---> 0.6565 (+0.0016)
+22/01/2026 18:38:33 >> Saving checkpoint to ../outputs/mimic_iii/strats|fold:3/checkpoint_best.bin
+22/01/2026 18:38:33 >> ============================================================
+22/01/2026 18:38:33 >> >>> Epoch 8/20
+22/01/2026 18:40:22 >> Epoch 8 completed | Avg Loss: 0.7233
+22/01/2026 18:40:24 >> EVAL_TRAIN   Epoch:     8 | AUROC: 0.9294 | AUPRC: 0.7050 | MinRP: 0.6298
+22/01/2026 18:40:32 >> VAL          Epoch:     8 | AUROC: 0.9067 | AUPRC: 0.6622 | MinRP: 0.6024
+22/01/2026 18:40:32 >> AUPRC improved: 0.6565 ---> 0.6622 (+0.0057)
+22/01/2026 18:40:32 >> Saving checkpoint to ../outputs/mimic_iii/strats|fold:3/checkpoint_best.bin
+22/01/2026 18:40:32 >> ============================================================
+22/01/2026 18:40:32 >> >>> Epoch 9/20
+22/01/2026 18:42:22 >> Epoch 9 completed | Avg Loss: 0.7120
+22/01/2026 18:42:24 >> EVAL_TRAIN   Epoch:     9 | AUROC: 0.9327 | AUPRC: 0.7110 | MinRP: 0.6255
+22/01/2026 18:42:32 >> VAL          Epoch:     9 | AUROC: 0.9069 | AUPRC: 0.6625 | MinRP: 0.6047
+22/01/2026 18:42:32 >> AUPRC improved: 0.6622 ---> 0.6625 (+0.0002)
+22/01/2026 18:42:32 >> Saving checkpoint to ../outputs/mimic_iii/strats|fold:3/checkpoint_best.bin
+22/01/2026 18:42:32 >> ============================================================
+22/01/2026 18:42:32 >> >>> Epoch 10/20
+22/01/2026 18:44:21 >> Epoch 10 completed | Avg Loss: 0.7143
+22/01/2026 18:44:23 >> EVAL_TRAIN   Epoch:    10 | AUROC: 0.9309 | AUPRC: 0.7026 | MinRP: 0.6208
+22/01/2026 18:44:32 >> VAL          Epoch:    10 | AUROC: 0.9054 | AUPRC: 0.6612 | MinRP: 0.5984
+22/01/2026 18:44:32 >> No improvement. Wait: 4/5
+22/01/2026 18:44:32 >> ============================================================
+22/01/2026 18:44:32 >> >>> Epoch 11/20
+22/01/2026 18:46:21 >> Epoch 11 completed | Avg Loss: 0.7109
+22/01/2026 18:46:23 >> EVAL_TRAIN   Epoch:    11 | AUROC: 0.9304 | AUPRC: 0.7006 | MinRP: 0.5992
+22/01/2026 18:46:31 >> VAL          Epoch:    11 | AUROC: 0.9080 | AUPRC: 0.6614 | MinRP: 0.5974
+22/01/2026 18:46:31 >> No improvement. Wait: 3/5
+22/01/2026 18:46:31 >> ============================================================
+22/01/2026 18:46:31 >> >>> Epoch 12/20
+22/01/2026 18:48:21 >> Epoch 12 completed | Avg Loss: 0.7054
+22/01/2026 18:48:23 >> EVAL_TRAIN   Epoch:    12 | AUROC: 0.9351 | AUPRC: 0.7153 | MinRP: 0.6170
+22/01/2026 18:48:32 >> VAL          Epoch:    12 | AUROC: 0.9089 | AUPRC: 0.6696 | MinRP: 0.6014
+22/01/2026 18:48:32 >> AUPRC improved: 0.6625 ---> 0.6696 (+0.0072)
+22/01/2026 18:48:32 >> Saving checkpoint to ../outputs/mimic_iii/strats|fold:3/checkpoint_best.bin
+22/01/2026 18:48:32 >> ============================================================
+22/01/2026 18:48:32 >> >>> Epoch 13/20
+22/01/2026 18:50:21 >> Epoch 13 completed | Avg Loss: 0.6948
+22/01/2026 18:50:23 >> EVAL_TRAIN   Epoch:    13 | AUROC: 0.9316 | AUPRC: 0.7066 | MinRP: 0.6213
+22/01/2026 18:50:31 >> VAL          Epoch:    13 | AUROC: 0.9081 | AUPRC: 0.6596 | MinRP: 0.5944
+22/01/2026 18:50:31 >> No improvement. Wait: 4/5
+22/01/2026 18:50:31 >> ============================================================
+22/01/2026 18:50:31 >> >>> Epoch 14/20
+22/01/2026 18:52:20 >> Epoch 14 completed | Avg Loss: 0.6948
+22/01/2026 18:52:22 >> EVAL_TRAIN   Epoch:    14 | AUROC: 0.9312 | AUPRC: 0.7010 | MinRP: 0.6186
+22/01/2026 18:52:30 >> VAL          Epoch:    14 | AUROC: 0.9063 | AUPRC: 0.6544 | MinRP: 0.5883
+22/01/2026 18:52:30 >> No improvement. Wait: 3/5
+22/01/2026 18:52:30 >> ============================================================
+22/01/2026 18:52:30 >> >>> Epoch 15/20
+22/01/2026 18:54:20 >> Epoch 15 completed | Avg Loss: 0.6983
+22/01/2026 18:54:22 >> EVAL_TRAIN   Epoch:    15 | AUROC: 0.9285 | AUPRC: 0.6991 | MinRP: 0.6287
+22/01/2026 18:54:30 >> VAL          Epoch:    15 | AUROC: 0.9070 | AUPRC: 0.6580 | MinRP: 0.5905
+22/01/2026 18:54:30 >> No improvement. Wait: 2/5
+22/01/2026 18:54:30 >> ============================================================
+22/01/2026 18:54:30 >> >>> Epoch 16/20
+22/01/2026 18:56:20 >> Epoch 16 completed | Avg Loss: 0.6964
+22/01/2026 18:56:21 >> EVAL_TRAIN   Epoch:    16 | AUROC: 0.9362 | AUPRC: 0.7222 | MinRP: 0.6213
+22/01/2026 18:56:30 >> VAL          Epoch:    16 | AUROC: 0.9100 | AUPRC: 0.6691 | MinRP: 0.5954
+22/01/2026 18:56:30 >> No improvement. Wait: 1/5
+22/01/2026 18:56:30 >> ============================================================
+22/01/2026 18:56:30 >> >>> Epoch 17/20
+22/01/2026 18:58:19 >> Epoch 17 completed | Avg Loss: 0.6850
+22/01/2026 18:58:21 >> EVAL_TRAIN   Epoch:    17 | AUROC: 0.9337 | AUPRC: 0.7070 | MinRP: 0.6255
+22/01/2026 18:58:29 >> VAL          Epoch:    17 | AUROC: 0.9057 | AUPRC: 0.6515 | MinRP: 0.5825
+22/01/2026 18:58:29 >> No improvement. Wait: 0/5
+22/01/2026 18:58:29 >> Patience reached. Early stopping.
+
+22/01/2026 18:58:29 >> ============================================================
+22/01/2026 18:58:29 >> TRAINING COMPLETED
+22/01/2026 18:58:29 >> ============================================================
+22/01/2026 18:58:29 >> Best Validation Results:
+22/01/2026 18:58:29 >>   AUROC: 0.9089 | AUPRC: 0.6696 | MinRP: 0.6014
+22/01/2026 18:58:29 >> Loading best model from ../outputs/mimic_iii/strats|fold:3/checkpoint_best.bin
+22/01/2026 18:58:29 >> Evaluating on test set...
+22/01/2026 18:58:40 >> TEST         AUROC: 0.9110 | AUPRC: 0.6877 | MinRP: 0.6090 | Accuracy: 0.8662
+
+22/01/2026 18:58:40 >> ============================================================
+22/01/2026 18:58:40 >> Classification Report:
+22/01/2026 18:58:40 >>               precision    recall  f1-score   support
+22/01/2026 18:58:40 >> 
+22/01/2026 18:58:40 >>          0.0     0.9605    0.8839    0.9207      9280
+22/01/2026 18:58:40 >>          1.0     0.4692    0.7386    0.5738      1289
+22/01/2026 18:58:40 >> 
+22/01/2026 18:58:40 >>     accuracy                         0.8662     10569
+22/01/2026 18:58:40 >>    macro avg     0.7149    0.8113    0.7472     10569
+22/01/2026 18:58:40 >> weighted avg     0.9006    0.8662    0.8784     10569
+22/01/2026 18:58:40 >> 
+22/01/2026 18:58:40 >> Confusion Matrix:
+22/01/2026 18:58:40 >> [8203, 1077]
+22/01/2026 18:58:40 >> [337, 952]
+22/01/2026 18:58:40 >> ============================================================
+22/01/2026 18:58:40 >> Final Test Results:
+22/01/2026 18:58:40 >>   AUROC: 0.9110 | AUPRC: 0.6877 | MinRP: 0.6090 | Accuracy: 0.8662
+22/01/2026 18:58:40 >> ============================================================

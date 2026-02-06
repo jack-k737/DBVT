@@ -1,0 +1,11 @@
+
+27/01/2026 16:04:16 >> Preparing dataset mimic_iii
+27/01/2026 16:04:20 >> Using fold 1/5
+27/01/2026 16:04:20 >> Loaded splits from mimic_iii_5fold.json
+27/01/2026 16:04:45 >> # train, val, test TS: [33817, 8471, 10583]
+27/01/2026 16:05:05 >> pos class weight: 7.1487
+27/01/2026 16:05:05 >> % pos class in train, val, test splits: [0.1227, 0.1277, 0.1204]
+27/01/2026 16:05:07 >> # static features: 3
+27/01/2026 16:05:08 >> # TS variables: 127
+27/01/2026 16:05:09 >> # patches: 4 | patch_layer: 3 | patch_size: 6h | stride: 6h
+27/01/2026 16:05:13 >> # max obs per patch: 20
