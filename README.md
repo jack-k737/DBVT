@@ -2,7 +2,7 @@
 
 This is the official implementation of the paper:
 
-**Dual-Branch Variable-Temporal Network for Irregular Medical Time Series Classification**
+**DBVT: A Dual-Branch Variable-Temporal Network for Irregular Clinical Time Series**
 
 *Submitted to MICCAI 2026*
 
