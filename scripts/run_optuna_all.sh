@@ -4,7 +4,7 @@
 # =============================================================================
 
 # 激活虚拟环境
-source /home/xiejun/codeLib/ijcai/.venv/bin/activate
+source your_path/.venv/bin/activate
 
 # 配置
 N_TRIALS=100  # 每个模型的试验次数

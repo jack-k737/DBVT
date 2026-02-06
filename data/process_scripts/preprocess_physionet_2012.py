@@ -4,7 +4,7 @@ import pandas as pd
 import pickle
 
 
-RAW_DATA_PATH = '/home/xiejun/data/challenge-2012'
+RAW_DATA_PATH = 'your_path/data/challenge-2012'
 
 def read_ts(raw_data_path, set_name):
     ts = []

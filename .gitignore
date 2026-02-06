@@ -15,20 +15,20 @@ build/
 .ipynb_checkpoints/
 
 # 训练 / 实验产出（不传 GitHub）
-outputs/
+/outputs/
 lab/outputs/
 lab/outputs copy/
-lab1/outputs/
 lab1/outputs copy/
 *.bin
 *.pt
 *.pth
 
+# lab1 实验结果（日志和图表）- 允许上传
+!lab1/outputs/
+!lab1/case_study_figures/
+
 # Optuna 数据库与日志（本地调参用）
 optuna_studies/
-lab/optuna_db/
-lab/optuna_outputs/
-lab/optuna_results/
 lab1/optuna_db/
 lab1/optuna_outputs/
 lab1/optuna_results/

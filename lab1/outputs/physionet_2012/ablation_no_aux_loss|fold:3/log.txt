@@ -1,0 +1,192 @@
+24/01/2026 18:52:39 >> Namespace(dataset='physionet_2012', model='ablation_no_aux_loss', split_file='physionet_2012_5fold.json', fold=3, root_dir='/home/xiejun/codeLib/miccai', output_dir='/home/xiejun/codeLib/miccai/lab1/outputs/physionet_2012/ablation_no_aux_loss|fold:3', lr=0.0001, train_batch_size=32, eval_batch_size=64, max_epochs=20, patience=5, validate_every=None, grad_clip_norm=0.3, max_obs=880, max_timesteps=880, device='cuda:2', seed=2026, gru_hid_dim=256, gru_dropout=0.2, transformer_hid_dim=64, transformer_num_layers=2, transformer_num_heads=4, transformer_dropout=0.1, fusion_hid_dim=256, fusion_dropout=0.2, use_parallel=True, logger=<utils.logger.Logger object at 0x7d630021e140>)
+
+24/01/2026 18:52:39 >> ============================================================
+24/01/2026 18:52:39 >> Loading dataset...
+24/01/2026 18:52:39 >> ============================================================
+
+24/01/2026 18:52:39 >> Preparing dataset physionet_2012
+24/01/2026 18:52:40 >> Using fold 3/5
+24/01/2026 18:52:40 >> Loaded splits from physionet_2012_5fold.json
+24/01/2026 18:52:40 >> # train, val, test TS: [7673, 1918, 2397]
+24/01/2026 18:52:41 >> pos class weight: 6.0137
+24/01/2026 18:52:41 >> % pos class in train, val, test splits: [0.1426, 0.1470, 0.1381]
+24/01/2026 18:52:41 >> # static features: 8
+24/01/2026 18:52:41 >> # TS variables (MedBiVT): 36
+24/01/2026 18:52:43 >> # timesteps (MedBiVT): 49
+
+24/01/2026 18:52:59 >> ============================================================
+24/01/2026 18:52:59 >> Initializing ablation_no_aux_loss model...
+24/01/2026 18:52:59 >> ============================================================
+
+24/01/2026 18:53:00 >> Model details:
+24/01/2026 18:53:00 >> # parameters: 703849
+24/01/2026 18:53:00 >> # trainable parameters: 703849, 100.00%
+24/01/2026 18:53:00 >> #params by dtype:
+24/01/2026 18:53:00 >> torch.float32: 703849, 100.00%
+
+24/01/2026 18:53:00 >> No. of training batches per epoch = 240
+
+24/01/2026 18:53:00 >> ============================================================
+24/01/2026 18:53:00 >>                Starting training...
+24/01/2026 18:53:00 >> ============================================================
+24/01/2026 18:53:00 >> >>> Epoch 1/20
+24/01/2026 18:53:18 >> Epoch 1 completed | Avg Loss: 1.0409
+24/01/2026 18:53:21 >> EVAL_TRAIN   Epoch:     1 | AUROC: 0.8283 | AUPRC: 0.4622 | MinRP: 0.4613
+24/01/2026 18:53:22 >> VAL          Epoch:     1 | AUROC: 0.8415 | AUPRC: 0.5092 | MinRP: 0.4824
+24/01/2026 18:53:22 >> AUPRC improved: 0.0000 ---> 0.5092 (+0.5092)
+24/01/2026 18:53:22 >> Saving checkpoint to /home/xiejun/codeLib/miccai/lab1/outputs/physionet_2012/ablation_no_aux_loss|fold:3/checkpoint_best.bin
+24/01/2026 18:53:22 >> ============================================================
+24/01/2026 18:53:22 >> >>> Epoch 2/20
+24/01/2026 18:53:38 >> Epoch 2 completed | Avg Loss: 0.9054
+24/01/2026 18:53:40 >> EVAL_TRAIN   Epoch:     2 | AUROC: 0.8447 | AUPRC: 0.5032 | MinRP: 0.4760
+24/01/2026 18:53:41 >> VAL          Epoch:     2 | AUROC: 0.8520 | AUPRC: 0.5277 | MinRP: 0.5177
+24/01/2026 18:53:41 >> AUPRC improved: 0.5092 ---> 0.5277 (+0.0186)
+24/01/2026 18:53:41 >> Saving checkpoint to /home/xiejun/codeLib/miccai/lab1/outputs/physionet_2012/ablation_no_aux_loss|fold:3/checkpoint_best.bin
+24/01/2026 18:53:41 >> ============================================================
+24/01/2026 18:53:41 >> >>> Epoch 3/20
+24/01/2026 18:53:57 >> Epoch 3 completed | Avg Loss: 0.8800
+24/01/2026 18:53:59 >> EVAL_TRAIN   Epoch:     3 | AUROC: 0.8520 | AUPRC: 0.5247 | MinRP: 0.4966
+24/01/2026 18:54:00 >> VAL          Epoch:     3 | AUROC: 0.8580 | AUPRC: 0.5416 | MinRP: 0.5194
+24/01/2026 18:54:00 >> AUPRC improved: 0.5277 ---> 0.5416 (+0.0139)
+24/01/2026 18:54:00 >> Saving checkpoint to /home/xiejun/codeLib/miccai/lab1/outputs/physionet_2012/ablation_no_aux_loss|fold:3/checkpoint_best.bin
+24/01/2026 18:54:00 >> ============================================================
+24/01/2026 18:54:00 >> >>> Epoch 4/20
+24/01/2026 18:54:16 >> Epoch 4 completed | Avg Loss: 0.8763
+24/01/2026 18:54:18 >> EVAL_TRAIN   Epoch:     4 | AUROC: 0.8587 | AUPRC: 0.5357 | MinRP: 0.5103
+24/01/2026 18:54:19 >> VAL          Epoch:     4 | AUROC: 0.8603 | AUPRC: 0.5470 | MinRP: 0.5345
+24/01/2026 18:54:19 >> AUPRC improved: 0.5416 ---> 0.5470 (+0.0054)
+24/01/2026 18:54:19 >> Saving checkpoint to /home/xiejun/codeLib/miccai/lab1/outputs/physionet_2012/ablation_no_aux_loss|fold:3/checkpoint_best.bin
+24/01/2026 18:54:19 >> ============================================================
+24/01/2026 18:54:19 >> >>> Epoch 5/20
+24/01/2026 18:54:35 >> Epoch 5 completed | Avg Loss: 0.8370
+24/01/2026 18:54:37 >> EVAL_TRAIN   Epoch:     5 | AUROC: 0.8658 | AUPRC: 0.5509 | MinRP: 0.5188
+24/01/2026 18:54:38 >> VAL          Epoch:     5 | AUROC: 0.8592 | AUPRC: 0.5498 | MinRP: 0.5124
+24/01/2026 18:54:38 >> AUPRC improved: 0.5470 ---> 0.5498 (+0.0028)
+24/01/2026 18:54:38 >> Saving checkpoint to /home/xiejun/codeLib/miccai/lab1/outputs/physionet_2012/ablation_no_aux_loss|fold:3/checkpoint_best.bin
+24/01/2026 18:54:38 >> ============================================================
+24/01/2026 18:54:38 >> >>> Epoch 6/20
+24/01/2026 18:54:54 >> Epoch 6 completed | Avg Loss: 0.8434
+24/01/2026 18:54:55 >> EVAL_TRAIN   Epoch:     6 | AUROC: 0.8733 | AUPRC: 0.5631 | MinRP: 0.5256
+24/01/2026 18:54:57 >> VAL          Epoch:     6 | AUROC: 0.8642 | AUPRC: 0.5593 | MinRP: 0.5442
+24/01/2026 18:54:57 >> AUPRC improved: 0.5498 ---> 0.5593 (+0.0095)
+24/01/2026 18:54:57 >> Saving checkpoint to /home/xiejun/codeLib/miccai/lab1/outputs/physionet_2012/ablation_no_aux_loss|fold:3/checkpoint_best.bin
+24/01/2026 18:54:57 >> ============================================================
+24/01/2026 18:54:57 >> >>> Epoch 7/20
+24/01/2026 18:55:13 >> Epoch 7 completed | Avg Loss: 0.8251
+24/01/2026 18:55:14 >> EVAL_TRAIN   Epoch:     7 | AUROC: 0.8756 | AUPRC: 0.5673 | MinRP: 0.5455
+24/01/2026 18:55:16 >> VAL          Epoch:     7 | AUROC: 0.8634 | AUPRC: 0.5604 | MinRP: 0.5474
+24/01/2026 18:55:16 >> AUPRC improved: 0.5593 ---> 0.5604 (+0.0011)
+24/01/2026 18:55:16 >> Saving checkpoint to /home/xiejun/codeLib/miccai/lab1/outputs/physionet_2012/ablation_no_aux_loss|fold:3/checkpoint_best.bin
+24/01/2026 18:55:16 >> ============================================================
+24/01/2026 18:55:16 >> >>> Epoch 8/20
+24/01/2026 18:55:32 >> Epoch 8 completed | Avg Loss: 0.8216
+24/01/2026 18:55:33 >> EVAL_TRAIN   Epoch:     8 | AUROC: 0.8798 | AUPRC: 0.5784 | MinRP: 0.5390
+24/01/2026 18:55:35 >> VAL          Epoch:     8 | AUROC: 0.8659 | AUPRC: 0.5648 | MinRP: 0.5319
+24/01/2026 18:55:35 >> AUPRC improved: 0.5604 ---> 0.5648 (+0.0044)
+24/01/2026 18:55:35 >> Saving checkpoint to /home/xiejun/codeLib/miccai/lab1/outputs/physionet_2012/ablation_no_aux_loss|fold:3/checkpoint_best.bin
+24/01/2026 18:55:35 >> ============================================================
+24/01/2026 18:55:35 >> >>> Epoch 9/20
+24/01/2026 18:55:51 >> Epoch 9 completed | Avg Loss: 0.8080
+24/01/2026 18:55:53 >> EVAL_TRAIN   Epoch:     9 | AUROC: 0.8873 | AUPRC: 0.5855 | MinRP: 0.5582
+24/01/2026 18:55:54 >> VAL          Epoch:     9 | AUROC: 0.8649 | AUPRC: 0.5615 | MinRP: 0.5282
+24/01/2026 18:55:54 >> No improvement. Wait: 4/5
+24/01/2026 18:55:54 >> ============================================================
+24/01/2026 18:55:54 >> >>> Epoch 10/20
+24/01/2026 18:56:10 >> Epoch 10 completed | Avg Loss: 0.7728
+24/01/2026 18:56:11 >> EVAL_TRAIN   Epoch:    10 | AUROC: 0.8889 | AUPRC: 0.5829 | MinRP: 0.5461
+24/01/2026 18:56:13 >> VAL          Epoch:    10 | AUROC: 0.8650 | AUPRC: 0.5576 | MinRP: 0.5292
+24/01/2026 18:56:13 >> No improvement. Wait: 3/5
+24/01/2026 18:56:13 >> ============================================================
+24/01/2026 18:56:13 >> >>> Epoch 11/20
+24/01/2026 18:56:29 >> Epoch 11 completed | Avg Loss: 0.7835
+24/01/2026 18:56:30 >> EVAL_TRAIN   Epoch:    11 | AUROC: 0.8953 | AUPRC: 0.6067 | MinRP: 0.5719
+24/01/2026 18:56:31 >> VAL          Epoch:    11 | AUROC: 0.8640 | AUPRC: 0.5669 | MinRP: 0.5420
+24/01/2026 18:56:31 >> AUPRC improved: 0.5648 ---> 0.5669 (+0.0020)
+24/01/2026 18:56:31 >> Saving checkpoint to /home/xiejun/codeLib/miccai/lab1/outputs/physionet_2012/ablation_no_aux_loss|fold:3/checkpoint_best.bin
+24/01/2026 18:56:31 >> ============================================================
+24/01/2026 18:56:31 >> >>> Epoch 12/20
+24/01/2026 18:56:47 >> Epoch 12 completed | Avg Loss: 0.7662
+24/01/2026 18:56:49 >> EVAL_TRAIN   Epoch:    12 | AUROC: 0.8951 | AUPRC: 0.6008 | MinRP: 0.5544
+24/01/2026 18:56:50 >> VAL          Epoch:    12 | AUROC: 0.8660 | AUPRC: 0.5689 | MinRP: 0.5371
+24/01/2026 18:56:50 >> AUPRC improved: 0.5669 ---> 0.5689 (+0.0020)
+24/01/2026 18:56:50 >> Saving checkpoint to /home/xiejun/codeLib/miccai/lab1/outputs/physionet_2012/ablation_no_aux_loss|fold:3/checkpoint_best.bin
+24/01/2026 18:56:50 >> ============================================================
+24/01/2026 18:56:50 >> >>> Epoch 13/20
+24/01/2026 18:57:06 >> Epoch 13 completed | Avg Loss: 0.7529
+24/01/2026 18:57:07 >> EVAL_TRAIN   Epoch:    13 | AUROC: 0.8956 | AUPRC: 0.5980 | MinRP: 0.5748
+24/01/2026 18:57:09 >> VAL          Epoch:    13 | AUROC: 0.8660 | AUPRC: 0.5613 | MinRP: 0.5177
+24/01/2026 18:57:09 >> No improvement. Wait: 4/5
+24/01/2026 18:57:09 >> ============================================================
+24/01/2026 18:57:09 >> >>> Epoch 14/20
+24/01/2026 18:57:24 >> Epoch 14 completed | Avg Loss: 0.7656
+24/01/2026 18:57:26 >> EVAL_TRAIN   Epoch:    14 | AUROC: 0.9039 | AUPRC: 0.6202 | MinRP: 0.5768
+24/01/2026 18:57:27 >> VAL          Epoch:    14 | AUROC: 0.8673 | AUPRC: 0.5730 | MinRP: 0.5350
+24/01/2026 18:57:27 >> AUPRC improved: 0.5689 ---> 0.5730 (+0.0042)
+24/01/2026 18:57:27 >> Saving checkpoint to /home/xiejun/codeLib/miccai/lab1/outputs/physionet_2012/ablation_no_aux_loss|fold:3/checkpoint_best.bin
+24/01/2026 18:57:27 >> ============================================================
+24/01/2026 18:57:27 >> >>> Epoch 15/20
+24/01/2026 18:57:43 >> Epoch 15 completed | Avg Loss: 0.7471
+24/01/2026 18:57:44 >> EVAL_TRAIN   Epoch:    15 | AUROC: 0.9057 | AUPRC: 0.6284 | MinRP: 0.5825
+24/01/2026 18:57:46 >> VAL          Epoch:    15 | AUROC: 0.8655 | AUPRC: 0.5732 | MinRP: 0.5423
+24/01/2026 18:57:46 >> AUPRC improved: 0.5730 ---> 0.5732 (+0.0002)
+24/01/2026 18:57:46 >> Saving checkpoint to /home/xiejun/codeLib/miccai/lab1/outputs/physionet_2012/ablation_no_aux_loss|fold:3/checkpoint_best.bin
+24/01/2026 18:57:46 >> ============================================================
+24/01/2026 18:57:46 >> >>> Epoch 16/20
+24/01/2026 18:58:01 >> Epoch 16 completed | Avg Loss: 0.7547
+24/01/2026 18:58:03 >> EVAL_TRAIN   Epoch:    16 | AUROC: 0.9108 | AUPRC: 0.6378 | MinRP: 0.5973
+24/01/2026 18:58:04 >> VAL          Epoch:    16 | AUROC: 0.8624 | AUPRC: 0.5647 | MinRP: 0.5347
+24/01/2026 18:58:04 >> No improvement. Wait: 4/5
+24/01/2026 18:58:04 >> ============================================================
+24/01/2026 18:58:04 >> >>> Epoch 17/20
+24/01/2026 18:58:20 >> Epoch 17 completed | Avg Loss: 0.7355
+24/01/2026 18:58:21 >> EVAL_TRAIN   Epoch:    17 | AUROC: 0.9142 | AUPRC: 0.6412 | MinRP: 0.5941
+24/01/2026 18:58:23 >> VAL          Epoch:    17 | AUROC: 0.8612 | AUPRC: 0.5603 | MinRP: 0.5426
+24/01/2026 18:58:23 >> No improvement. Wait: 3/5
+24/01/2026 18:58:23 >> ============================================================
+24/01/2026 18:58:23 >> >>> Epoch 18/20
+24/01/2026 18:58:39 >> Epoch 18 completed | Avg Loss: 0.7393
+24/01/2026 18:58:40 >> EVAL_TRAIN   Epoch:    18 | AUROC: 0.9159 | AUPRC: 0.6510 | MinRP: 0.6177
+24/01/2026 18:58:41 >> VAL          Epoch:    18 | AUROC: 0.8594 | AUPRC: 0.5604 | MinRP: 0.5248
+24/01/2026 18:58:41 >> No improvement. Wait: 2/5
+24/01/2026 18:58:41 >> ============================================================
+24/01/2026 18:58:41 >> >>> Epoch 19/20
+24/01/2026 18:58:57 >> Epoch 19 completed | Avg Loss: 0.7189
+24/01/2026 18:58:58 >> EVAL_TRAIN   Epoch:    19 | AUROC: 0.9197 | AUPRC: 0.6556 | MinRP: 0.6199
+24/01/2026 18:59:00 >> VAL          Epoch:    19 | AUROC: 0.8622 | AUPRC: 0.5661 | MinRP: 0.5284
+24/01/2026 18:59:00 >> No improvement. Wait: 1/5
+24/01/2026 18:59:00 >> ============================================================
+24/01/2026 18:59:00 >> >>> Epoch 20/20
+24/01/2026 18:59:15 >> Epoch 20 completed | Avg Loss: 0.7017
+24/01/2026 18:59:17 >> EVAL_TRAIN   Epoch:    20 | AUROC: 0.9227 | AUPRC: 0.6662 | MinRP: 0.6143
+24/01/2026 18:59:18 >> VAL          Epoch:    20 | AUROC: 0.8584 | AUPRC: 0.5600 | MinRP: 0.5401
+24/01/2026 18:59:18 >> No improvement. Wait: 0/5
+24/01/2026 18:59:18 >> Patience reached. Early stopping.
+
+24/01/2026 18:59:18 >> ============================================================
+24/01/2026 18:59:18 >> TRAINING COMPLETED
+24/01/2026 18:59:18 >> ============================================================
+24/01/2026 18:59:18 >> Best Validation Results:
+24/01/2026 18:59:18 >>   AUROC: 0.8655 | AUPRC: 0.5732 | MinRP: 0.5423
+24/01/2026 18:59:18 >> Loading best model from /home/xiejun/codeLib/miccai/lab1/outputs/physionet_2012/ablation_no_aux_loss|fold:3/checkpoint_best.bin
+24/01/2026 18:59:18 >> Evaluating on test set...
+24/01/2026 18:59:20 >> TEST         AUROC: 0.8878 | AUPRC: 0.5766 | MinRP: 0.5592 | Accuracy: 0.8302
+
+24/01/2026 18:59:20 >> ============================================================
+24/01/2026 18:59:20 >> Classification Report:
+24/01/2026 18:59:20 >>               precision    recall  f1-score   support
+24/01/2026 18:59:20 >> 
+24/01/2026 18:59:20 >>          0.0     0.9585    0.8393    0.8950      2066
+24/01/2026 18:59:20 >>          1.0     0.4354    0.7734    0.5571       331
+24/01/2026 18:59:20 >> 
+24/01/2026 18:59:20 >>     accuracy                         0.8302      2397
+24/01/2026 18:59:20 >>    macro avg     0.6970    0.8064    0.7260      2397
+24/01/2026 18:59:20 >> weighted avg     0.8863    0.8302    0.8483      2397
+24/01/2026 18:59:20 >> 
+24/01/2026 18:59:20 >> Confusion Matrix:
+24/01/2026 18:59:20 >> [1734, 332]
+24/01/2026 18:59:20 >> [75, 256]
+24/01/2026 18:59:20 >> ============================================================
+24/01/2026 18:59:20 >> ============================================================
+24/01/2026 18:59:20 >> Final Test Results:
+24/01/2026 18:59:20 >>   AUROC: 0.8878 | AUPRC: 0.5766 | MinRP: 0.5592 | Accuracy: 0.8302
+24/01/2026 18:59:20 >> ============================================================
