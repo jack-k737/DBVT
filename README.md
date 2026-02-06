@@ -103,7 +103,7 @@ python generate_splits.py
 cd src
 python main.py \
     --dataset physionet_2012 \
-    --model_type grud \
+    --model_type dbvt \
     --fold 1 \
     --device cuda:0
 ```
