@@ -18,9 +18,9 @@ We evaluate DBVT and 9 baselines on three clinical benchmarks under 5-fold cross
 
 | Dataset | Task | # Samples | # Variables | Source |
 |---------|------|-----------|-------------|--------|
-| PhysioNet 2012 | In-hospital mortality | ~11,988 | 37 | [link](https://physionet.org/content/challenge-2012/) |
-| PhysioNet 2019 | Sepsis early prediction | ~40,336 | 34 | [link](https://physionet.org/content/challenge-2019/) |
-| MIMIC-III | In-hospital mortality | ~17,903 | 17 | [link](https://physionet.org/content/mimiciii/)  |
+| PhysioNet 2012 | In-hospital mortality | ~11,988 | 36 | [link](https://physionet.org/content/challenge-2012/) |
+| PhysioNet 2019 | Sepsis early prediction | ~38575 | 34 | [link](https://physionet.org/content/challenge-2019/) |
+| MIMIC-III | In-hospital mortality | ~52,871 | 127 | [link](https://physionet.org/content/mimiciii/)  |
 
 ## Experiment Results
 
