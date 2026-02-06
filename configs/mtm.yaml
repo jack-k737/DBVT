@@ -1,0 +1,36 @@
+# MTM model configurations for different datasets
+# Tuned with Optuna (best trial 16, AUPRC=0.5748)
+
+physionet_2012:
+  hid_dim: 96
+  r_hid: 4
+  dropout: 0.13
+  down_mode: max
+  num_mtm_layers: 4
+  downsample_ratio: 3
+  lr: 0.0004
+  train_batch_size: 64
+  grad_clip_norm: 5.0
+
+physionet_2019:
+  hid_dim: 64
+  r_hid: 2
+  dropout: 0.1
+  down_mode: concat
+  num_mtm_layers: 3
+  downsample_ratio: 4
+  lr: 0.0005
+  train_batch_size: 32
+  grad_clip_norm: 1.0
+
+# Tuned with Optuna (trial 35, AUPRC=0.6838)
+mimic_iii:
+  hid_dim: 64
+  r_hid: 4
+  dropout: 0.1
+  down_mode: max
+  num_mtm_layers: 3
+  downsample_ratio: 4
+  lr: 0.0004
+  train_batch_size: 32
+  grad_clip_norm: 1.0

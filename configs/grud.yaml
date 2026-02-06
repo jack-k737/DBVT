@@ -1,0 +1,25 @@
+# GRU-D model configurations for different datasets
+
+
+# Tuned with Optuna (trial 24, AUPRC=0.5404)
+physionet_2012:
+  hid_dim: 128
+  dropout: 0.1
+  lr: 0.0002
+  train_batch_size: 32
+  grad_clip_norm: 5.0
+
+# Tuned with Optuna (trial 95, AUPRC=0.4407)
+physionet_2019:
+  hid_dim: 128
+  dropout: 0.2
+  lr: 0.0005
+  train_batch_size: 32
+  grad_clip_norm: 0.3
+
+mimic_iii:
+  hid_dim: 64
+  dropout: 0.2
+  lr: 0.0005
+  train_batch_size: 32
+  grad_clip_norm: 3.0

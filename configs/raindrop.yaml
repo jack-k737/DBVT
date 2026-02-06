@@ -1,0 +1,30 @@
+# RainDrop model configurations for different datasets
+# Tuned with Optuna (best trial 53, AUPRC=0.5253)
+
+physionet_2012:
+  hid_dim: 128
+  num_layers: 2
+  num_heads: 4
+  dropout: 0.18
+  lr: 0.0008
+  train_batch_size: 32
+  grad_clip_norm: 3.0
+
+# Tuned with Optuna (trial 99, AUPRC=0.4623)
+physionet_2019:
+  hid_dim: 256
+  num_layers: 2
+  num_heads: 16
+  dropout: 0.1
+  lr: 0.0001
+  train_batch_size: 32
+  grad_clip_norm: 1.0
+
+mimic_iii:
+  hid_dim: 256
+  num_layers: 1
+  num_heads: 16
+  dropout: 0.31
+  lr: 0.0003
+  train_batch_size: 32
+  grad_clip_norm: 1.0

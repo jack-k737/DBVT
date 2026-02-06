@@ -1,0 +1,34 @@
+# KEDGN model configurations for different datasets
+# Tuned with Optuna (best trial 103, AUPRC=0.5752)
+
+physionet_2012:
+  hid_dim: 12
+  query_vector_dim: 7
+  node_emb_dim: 7
+  node_enc_layer: 3
+  rarity_alpha: 1.75
+  lr: 0.001
+  train_batch_size: 256
+  grad_clip_norm: 0.3
+
+# Tuned with Optuna (trial 79, AUPRC=0.4798)
+physionet_2019:
+  hid_dim: 16
+  query_vector_dim: 8
+  node_emb_dim: 7
+  node_enc_layer: 3
+  rarity_alpha: 2.3
+  lr: 0.001
+  train_batch_size: 512
+  grad_clip_norm: 3.0
+
+# Tuned with Optuna (trial 86, AUPRC=0.6882)
+mimic_iii:
+  hid_dim: 8
+  query_vector_dim: 7
+  node_emb_dim: 7
+  node_enc_layer: 3
+  rarity_alpha: 2.3
+  lr: 0.001
+  train_batch_size: 512
+  grad_clip_norm: 3.0

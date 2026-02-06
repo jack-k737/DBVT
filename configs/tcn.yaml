@@ -1,0 +1,28 @@
+# TCN (Temporal Convolutional Network) model configurations
+
+physionet_2012:
+  hid_dim: 64
+  num_layers: 4
+  kernel_size: 3
+  dropout: 0.2
+  lr: 0.001
+  train_batch_size: 32
+  grad_clip_norm: 1.0
+
+physionet_2019:
+  hid_dim: 64
+  num_layers: 4
+  kernel_size: 3
+  dropout: 0.2
+  lr: 0.001
+  train_batch_size: 32
+  grad_clip_norm: 1.0
+
+mimic_iii:
+  hid_dim: 128
+  num_layers: 4
+  kernel_size: 3
+  dropout: 0.2
+  lr: 0.0005
+  train_batch_size: 64
+  grad_clip_norm: 1.0

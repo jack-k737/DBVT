@@ -1,0 +1,47 @@
+# WarpFormer model configurations for different datasets
+# Tuned with Optuna (best trial 15, AUPRC=0.5607)
+
+physionet_2012:
+  hid_dim: 64
+  num_layers: 2
+  num_heads: 2
+  dropout: 0.1
+  lr: 0.0003
+  train_batch_size: 32
+  grad_clip_norm: 0.3
+  warp_num_max: 18
+  warpfunc: l1
+  warpact: relu
+  nonneg_trans: abs
+  warp_full_attn: True
+
+
+
+# Tuned with Optuna (trial 49, AUPRC=0.4849)
+physionet_2019:
+  hid_dim: 64
+  num_layers: 1
+  num_heads: 8
+  dropout: 0.2
+  lr: 0.0005
+  train_batch_size: 32
+  grad_clip_norm: 0.3
+  warp_num_max: 7
+  warpfunc: l3
+  warpact: relu
+  nonneg_trans: abs
+  warp_full_attn: True
+
+mimic_iii:
+  hid_dim: 64
+  num_layers: 3
+  num_heads: 8
+  dropout: 0.2
+  lr: 0.0007
+  train_batch_size: 128
+  grad_clip_norm: 1.0
+  warp_num_max: 16
+  warpfunc: l2
+  warpact: sigmoid
+  nonneg_trans: softplus
+  warp_full_attn: True

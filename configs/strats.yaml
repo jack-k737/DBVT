@@ -1,0 +1,32 @@
+# STraTS model configurations for different datasets
+# Tuned with Optuna (best trial 94, AUPRC=0.5652)
+
+physionet_2012:
+  hid_dim: 256
+  num_layers: 3
+  num_heads: 16
+  dropout: 0.11
+  attention_dropout: 0.25
+  lr: 0.0001
+  train_batch_size: 16
+  grad_clip_norm: 1.0
+
+# Tuned with Optuna (trial 100, AUPRC=0.4789)
+physionet_2019:
+  hid_dim: 64
+  num_layers: 1
+  num_heads: 16
+  dropout: 0.2
+  attention_dropout: 0.1
+  lr: 0.001
+  train_batch_size: 16
+  grad_clip_norm: 0.3
+
+mimic_iii:
+  hid_dim: 64
+  num_layers: 2
+  num_heads: 16
+  dropout: 0.2
+  attention_dropout: 0.2
+  lr: 0.0005
+  grad_clip_norm: 0.3

@@ -1,0 +1,38 @@
+# HiPatch model configurations for different datasets
+# Tuned with Optuna (trial 38, AUPRC=0.5619)
+
+physionet_2012:
+  hid_dim: 64
+  num_heads: 2
+  num_layers: 2
+  patch_size: 7
+  alpha: 0.78
+  res: 1
+  lr: 0.0002
+  train_batch_size: 32
+  grad_clip_norm: 0.3
+
+# Tuned with Optuna (trial 81, AUPRC=0.4822)
+physionet_2019:
+  hid_dim: 64
+  num_heads: 1
+  num_layers: 1
+  patch_size: 8
+  alpha: 0.8
+  res: 1
+  lr: 0.0005
+  train_batch_size: 32
+  grad_clip_norm: 0.3
+
+
+# Tuned with Optuna (trial 72, AUPRC=0.6840)
+mimic_iii:
+  hid_dim: 32
+  num_heads: 2
+  num_layers: 2
+  patch_size: 6
+  alpha: 0.8
+  res: 1
+  lr: 0.0005
+  train_batch_size: 64
+  grad_clip_norm: 1.0

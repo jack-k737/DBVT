@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+env/
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# 训练 / 实验产出（不传 GitHub）
+outputs/
+lab/outputs/
+lab/outputs copy/
+lab1/outputs/
+lab1/outputs copy/
+*.bin
+*.pt
+*.pth
+
+# Optuna 数据库与日志（本地调参用）
+optuna_studies/
+lab/optuna_db/
+lab/optuna_outputs/
+lab/optuna_results/
+lab1/optuna_db/
+lab1/optuna_outputs/
+lab1/optuna_results/
+
+# 我的模型代码（中稿前不公开）
+src/models/dbvt.py
+src/dataset/adapters/dbvt_adapter.py
+configs/dbvt.yaml
+configs/ours.yaml
+
+
+# 旧版实验目录
+lab/
+exp/
+miccai-bak
+
+# lab1：只上传实验结果和图表，隐藏模型代码和调参
+lab1/models/
+lab1/configs/
+lab1/main.py
+lab1/optuna_tune.py
+lab1/run.sh
+lab1/run1.sh
+
+# 数据与预处理产物（体积大或需自行下载）
+data/processed/*.pkl
+data/kedgn_embeddings/
+
+# 系统与 IDE
+.DS_Store
+*.swp
+*.swo
+.cursor/
