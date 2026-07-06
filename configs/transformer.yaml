@@ -1,0 +1,24 @@
+physionet_2012:
+  transformer_hid_dim: 64
+  transformer_num_layers: 4
+  transformer_num_heads: 8
+  transformer_dropout: 0.15
+  lr: 0.0002
+  train_batch_size: 16
+  grad_clip_norm: 0.3
+physionet_2019:
+  transformer_hid_dim: 64
+  transformer_num_layers: 4
+  transformer_num_heads: 4
+  transformer_dropout: 0.15
+  lr: 0.0005
+  train_batch_size: 32
+  grad_clip_norm: 0.3
+mimic_iii:
+  transformer_hid_dim: 32
+  transformer_num_layers: 2
+  transformer_num_heads: 4
+  transformer_dropout: 0.3
+  lr: 0.0005
+  train_batch_size: 16
+  grad_clip_norm: 5.0

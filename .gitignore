@@ -1,0 +1,40 @@
+.private_release/
+
+# Python caches
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments and local tooling
+.env
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# IDE files
+.idea/
+.vscode/
+
+# Logs
+logs/
+*.log
+
+# Training outputs and checkpoints
+outputs/
+lab-ablation/outputs/
+lab-dropout/outputs/
+checkpoint_best.bin
+checkpoint_last.bin
+
+# Dataset artifacts
+data/processed/
+data/kedgn_embeddings_1/*_var_rep.pt
