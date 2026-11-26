@@ -103,7 +103,19 @@ python data/kedgn_embeddings/generate_embeddings.py --model_path /path/to/Bio_Cl
 
 ## Quick start
 
-After data preparation, run a single DBVT fold:
+### View the paper's results (no training needed)
+
+The repository ships the training log of every reported run under `outputs/<dataset>/<model>|fold:<k>/log.txt`. To aggregate them into the mean ± std tables reported in the paper:
+
+```bash
+python scripts/aggregate_test_metrics.py --outputs_dir outputs
+```
+
+This prints per-dataset tables of AUROC / AUPRC / MinRP averaged over the five folds; Optuna tuning runs are skipped automatically. For paired comparisons between a backbone and its `+` plug-in variant, use `scripts/paired_ttest_plus_models.py`.
+
+### Run a single DBVT fold
+
+After data preparation:
 
 ```bash
 cd src
