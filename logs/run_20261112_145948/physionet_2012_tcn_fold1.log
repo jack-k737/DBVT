@@ -1,0 +1,35 @@
+12/11/2026 14:59:53 >> Namespace(dataset='physionet_2012', model_type='tcn', split_file='physionet_2012_5fold.json', fold=1, root_dir='/home/xiejun/codeLib/DBVT', output_dir='/home/xiejun/codeLib/DBVT/outputs/physionet_2012/tcn|fold:1', eval_batch_size=64, max_epochs=20, patience=5, validate_every=None, max_obs=880, max_timesteps=880, device='cuda:0', seed=2026, override=[], ablation_mode=None, variable_drop_rate=0.0, variable_drop_seed=None, output_model_type='tcn', plus_ablation_mode='full', config_model_type='tcn', branch2_enable=False, hid_dim=64, num_layers=4, kernel_size=3, dropout=0.2, lr=0.001, train_batch_size=32, grad_clip_norm=1.0, logger=<utils.logger.Logger object at 0x7d168f5e0730>)
+
+12/11/2026 14:59:54 >> Preparing dataset physionet_2012
+12/11/2026 14:59:56 >> Using fold 1/5
+12/11/2026 14:59:56 >> Loaded splits from physionet_2012_5fold.json
+Traceback (most recent call last):
+  File "/home/xiejun/codeLib/DBVT/src/main.py", line 243, in <module>
+    dataset = Dataset(args)
+  File "/home/xiejun/codeLib/DBVT/src/dataset/dataset.py", line 38, in __init__
+    data = self._filter_data(args, data)
+  File "/home/xiejun/codeLib/DBVT/src/dataset/dataset.py", line 182, in _filter_data
+    data = data.loc[~data.ts_id.isin(black_list)]
+  File "/home/xiejun/miniconda3/envs/ehrs/lib/python3.10/site-packages/pandas/core/indexing.py", line 1192, in __getitem__
+    return self._getitem_axis(maybe_callable, axis=axis)
+  File "/home/xiejun/miniconda3/envs/ehrs/lib/python3.10/site-packages/pandas/core/indexing.py", line 1414, in _getitem_axis
+    return self._getbool_axis(key, axis=axis)
+  File "/home/xiejun/miniconda3/envs/ehrs/lib/python3.10/site-packages/pandas/core/indexing.py", line 1212, in _getbool_axis
+    return self.obj._take_with_is_copy(inds, axis=axis)
+  File "/home/xiejun/miniconda3/envs/ehrs/lib/python3.10/site-packages/pandas/core/generic.py", line 4175, in _take_with_is_copy
+    result = self.take(indices=indices, axis=axis)
+  File "/home/xiejun/miniconda3/envs/ehrs/lib/python3.10/site-packages/pandas/core/generic.py", line 4155, in take
+    new_data = self._mgr.take(
+  File "/home/xiejun/miniconda3/envs/ehrs/lib/python3.10/site-packages/pandas/core/internals/managers.py", line 913, in take
+    return self.reindex_indexer(
+  File "/home/xiejun/miniconda3/envs/ehrs/lib/python3.10/site-packages/pandas/core/internals/managers.py", line 706, in reindex_indexer
+    new_blocks = [
+  File "/home/xiejun/miniconda3/envs/ehrs/lib/python3.10/site-packages/pandas/core/internals/managers.py", line 707, in <listcomp>
+    blk.take_nd(
+  File "/home/xiejun/miniconda3/envs/ehrs/lib/python3.10/site-packages/pandas/core/internals/blocks.py", line 1373, in take_nd
+    new_values = algos.take_nd(
+  File "/home/xiejun/miniconda3/envs/ehrs/lib/python3.10/site-packages/pandas/core/array_algos/take.py", line 117, in take_nd
+    return _take_nd_ndarray(arr, indexer, axis, fill_value, allow_fill)
+  File "/home/xiejun/miniconda3/envs/ehrs/lib/python3.10/site-packages/pandas/core/array_algos/take.py", line 162, in _take_nd_ndarray
+    func(arr, indexer, out, fill_value)
+KeyboardInterrupt

@@ -1,6 +1,7 @@
 """
 Main Dataset class for time series data loading and preprocessing.
 """
+import hashlib
 import pickle
 import numpy as np
 import os
@@ -80,7 +81,10 @@ class Dataset:
         
         # Extract static data with missingness indicator
         data, demo = self._extract_static_features(data)
-        
+
+        # Leave-variables-out robustness protocol (paper Table III).
+        data = self._apply_variable_type_drop(args, data)
+
         # Prepare variable mappings (sorted for consistency)
         variables = sorted(data.variable.unique())
         var_to_ind = {v: i for i, v in enumerate(variables)}
@@ -292,9 +296,77 @@ class Dataset:
         
         self.args.logger.write(f'# static features: {D}')
         self.args.D = D
-        
+
         return data, demo
-    
+
+    def _apply_variable_type_drop(self, args, data):
+        drop_rate = float(getattr(args, 'variable_drop_rate', 0.0) or 0.0)
+        variables = sorted(data.variable.unique())
+        num_variables = len(variables)
+
+        drop_info = {
+            'enabled': drop_rate > 0.0,
+            'drop_rate': drop_rate,
+            'original_num_variables': num_variables,
+            'dropped_num_variables': 0,
+            'remaining_num_variables': num_variables,
+            'resolved_seed': None,
+            'dropped_variables': [],
+        }
+
+        if drop_rate < 0.0 or drop_rate >= 1.0:
+            raise ValueError(f'variable_drop_rate must be in [0, 1), got {drop_rate}')
+
+        if drop_rate <= 0.0 or num_variables == 0:
+            self.variable_drop_info = drop_info
+            args.variable_drop_info = drop_info
+            return data
+
+        drop_count = int(num_variables * drop_rate)
+        if drop_count >= num_variables:
+            raise ValueError(
+                f'variable_drop_rate={drop_rate} drops all {num_variables} variables.'
+            )
+
+        if drop_count == 0:
+            self.args.logger.write(
+                f'Variable drop requested at rate {drop_rate:.2f}, '
+                f'but 0 of {num_variables} variables were selected.'
+            )
+            self.variable_drop_info = drop_info
+            args.variable_drop_info = drop_info
+            return data
+
+        resolved_seed = self._resolve_variable_drop_seed(args, drop_rate)
+        rng = np.random.default_rng(resolved_seed)
+        dropped_variables = sorted(
+            rng.choice(np.array(variables, dtype=object), size=drop_count, replace=False).tolist()
+        )
+
+        data = data.loc[~data.variable.isin(set(dropped_variables))].copy()
+        drop_info.update({
+            'dropped_num_variables': drop_count,
+            'remaining_num_variables': num_variables - drop_count,
+            'resolved_seed': resolved_seed,
+            'dropped_variables': dropped_variables,
+        })
+        self.args.logger.write(
+            'Variable-type drop enabled: '
+            f'rate={drop_rate:.2f}, dropped={drop_count}, remaining={num_variables - drop_count}'
+        )
+        self.args.logger.write(f'Dropped variables: {dropped_variables}')
+        self.variable_drop_info = drop_info
+        args.variable_drop_info = drop_info
+        return data
+
+    def _resolve_variable_drop_seed(self, args, drop_rate):
+        base_seed = getattr(args, 'variable_drop_seed', None)
+        if base_seed is None:
+            base_seed = getattr(args, 'seed', 0)
+        token = f'{args.dataset}|{args.fold}|{drop_rate:.8f}|{base_seed}'
+        digest = hashlib.sha256(token.encode('utf-8')).digest()
+        return int.from_bytes(digest[:8], 'big') % (2 ** 32)
+
     def get_batch(self, ind=None):
         """
         Get a batch of data.

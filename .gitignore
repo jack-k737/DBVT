@@ -1,40 +1,27 @@
-.private_release/
-
-# Python caches
+# Python
 __pycache__/
 *.py[cod]
-*.pyo
-
-# Virtual environments and local tooling
-.env
+*.egg-info/
 .venv/
 venv/
-env/
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.ipynb_checkpoints/
 
-# Build artifacts
-build/
-dist/
-*.egg-info/
+# Model weights and large binary artifacts
+*.bin
+*.ckpt
+*.pth
+*.safetensors
+*.pt
+!data/kedgn_embeddings/*.pt
 
-# IDE files
+# Hyperparameter search artifacts
+optuna_studies/
+optuna_results/
+
+# Datasets (generated from raw PhysioNet data)
+data/processed/
+data/raw/
+
+# OS / editors
+.DS_Store
 .idea/
 .vscode/
-
-# Logs
-logs/
-*.log
-
-# Training outputs and checkpoints
-outputs/
-lab-ablation/outputs/
-lab-dropout/outputs/
-checkpoint_best.bin
-checkpoint_last.bin
-
-# Dataset artifacts
-data/processed/
-data/kedgn_embeddings_1/*_var_rep.pt

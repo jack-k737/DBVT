@@ -1,0 +1,39 @@
+physionet_2012:
+  hid_dim: 32
+  num_layers: 2
+  num_heads: 2
+  dropout: 0.1
+  lr: 0.0005
+  train_batch_size: 32
+  grad_clip_norm: 0.3
+  warp_num_max: 10
+  warpfunc: l3
+  warpact: relu
+  nonneg_trans: abs
+  warp_full_attn: false
+physionet_2019:
+  hid_dim: 32
+  num_layers: 2
+  num_heads: 8
+  dropout: 0.1
+  lr: 0.0007
+  train_batch_size: 32
+  grad_clip_norm: 0.3
+  warp_num_max: 10
+  warpfunc: l1
+  warpact: sigmoid
+  nonneg_trans: abs
+  warp_full_attn: false
+mimic_iii:
+  hid_dim: 64
+  num_layers: 2
+  num_heads: 4
+  dropout: 0.1
+  lr: 0.0002
+  train_batch_size: 64
+  grad_clip_norm: 5.0
+  warp_num_max: 7
+  warpfunc: l1
+  warpact: relu
+  nonneg_trans: sigmoid
+  warp_full_attn: false

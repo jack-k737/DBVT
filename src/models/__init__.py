@@ -1,9 +1,10 @@
-"""Baseline model implementations included in the public partial release."""
+"""Models package for time series classification."""
 
 from .cde import NeuralCDE
 from .grud import GRUD_TS, GRUDBranch
 from .hipatch import HiPatch
 from .kedgn import KEDGN
+from .model_wrapper import ModelWrapper
 from .mtm import MTM
 from .raindrop import Raindrop
 from .sand import SAND
@@ -17,6 +18,7 @@ __all__ = [
     'HiPatch',
     'KEDGN',
     'MTM',
+    'ModelWrapper',
     'NeuralCDE',
     'Raindrop',
     'SAND',

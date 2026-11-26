@@ -1,4 +1,5 @@
 from tqdm import tqdm
+import argparse
 import pandas as pd
 import numpy as np
 import pickle
@@ -6,8 +7,14 @@ import os
 
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-RAW_DATA_PATH = '/home/xiejun/data/challenge-2019'
 PROCESSED_PATH = os.path.join(SCRIPT_DIR, '..', 'processed')
+parser = argparse.ArgumentParser(description='Preprocess PhysioNet Challenge 2019.')
+parser.add_argument(
+    '--raw_data_path',
+    default=os.environ.get('P19_RAW_DATA', os.path.join(SCRIPT_DIR, '..', 'raw', 'challenge-2019')),
+    help='Directory containing training_setA/b/c.',
+)
+RAW_DATA_PATH = parser.parse_args().raw_data_path
 SUBSETS = ['training_setA', 'training_setB', 'training_setC']
 TIME_COL = 'ICULOS'
 LABEL_COL = 'SepsisLabel'

@@ -1,5 +1,6 @@
 import pandas as pd
 from tqdm import tqdm
+import argparse
 import pickle
 import numpy as np
 import os
@@ -7,7 +8,16 @@ import yaml
 import warnings
 warnings.filterwarnings('ignore', category=pd.errors.SettingWithCopyWarning)
 warnings.filterwarnings('ignore', category=pd.errors.DtypeWarning)
-RAW_DATA_PATH = '/home/xiejun/data/mimic-iii'
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROCESSED_PATH = os.path.join(SCRIPT_DIR, '..', 'processed')
+parser = argparse.ArgumentParser(description='Preprocess MIMIC-III.')
+parser.add_argument(
+    '--raw_data_path',
+    default=os.environ.get('MIMIC_III_RAW_DATA', os.path.join(SCRIPT_DIR, '..', 'raw', 'mimic-iii')),
+    help='Directory containing ICUSTAYS.csv, CHARTEVENTS.csv, LABEVENTS.csv, etc.',
+)
+RAW_DATA_PATH = parser.parse_args().raw_data_path
 
 # Get all ICU stays.
 icu = pd.read_csv(os.path.join(RAW_DATA_PATH,'ICUSTAYS.csv'), 
@@ -836,8 +846,8 @@ def f(x):
 events['TABLE'] = events['TABLE'].apply(f)
 
 # Save data (splits are now generated separately via generate_splits.py)
-os.makedirs('../processed', exist_ok=True)
-pickle.dump([events, oc], 
-            open('../processed/mimic_iii.pkl','wb'))
+os.makedirs(PROCESSED_PATH, exist_ok=True)
+output_path = os.path.join(PROCESSED_PATH, 'mimic_iii.pkl')
+pickle.dump([events, oc], open(output_path, 'wb'))
 print(f'Saved {len(events)} records, {len(oc)} outcomes')
 print('Note: Run generate_splits.py to create train/val/test splits')

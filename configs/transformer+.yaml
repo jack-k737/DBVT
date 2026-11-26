@@ -1,0 +1,39 @@
+physionet_2012:
+  lambda_aux: 0.5
+  gru_hid_dim: 96
+  gru_dropout: 0.2
+  transformer_hid_dim: 32
+  transformer_num_layers: 4
+  transformer_num_heads: 8
+  transformer_dropout: 0.3
+  fusion_hid_dim: 96
+  fusion_dropout: 0.3
+  lr: 0.0007
+  train_batch_size: 64
+  grad_clip_norm: 1.0
+physionet_2019:
+  lambda_aux: 0.5
+  gru_hid_dim: 128
+  gru_dropout: 0.2
+  transformer_hid_dim: 32
+  transformer_num_layers: 4
+  transformer_num_heads: 4
+  transformer_dropout: 0.15
+  fusion_hid_dim: 128
+  fusion_dropout: 0.2
+  lr: 0.0005
+  train_batch_size: 16
+  grad_clip_norm: 0.3
+mimic_iii:
+  lambda_aux: 0.5
+  gru_hid_dim: 128
+  gru_dropout: 0.3
+  transformer_hid_dim: 32
+  transformer_num_layers: 2
+  transformer_num_heads: 2
+  transformer_dropout: 0.15
+  fusion_hid_dim: 128
+  fusion_dropout: 0.1
+  lr: 0.0002
+  train_batch_size: 16
+  grad_clip_norm: 3.0

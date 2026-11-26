@@ -14,6 +14,10 @@ import json
 import numpy as np
 
 
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, '..'))
+
+
 def load_processed_data(dataset_name: str, processed_dir: str = 'processed'):
     """Load processed data."""
     filepath = os.path.join(processed_dir, f'{dataset_name}.pkl')
@@ -145,10 +149,10 @@ def main():
                         help='Validation ratio from trainval data (default: 0.2)')
     parser.add_argument('--seed', type=int, default=2026,
                         help='Random seed (default: 2026)')
-    parser.add_argument('--output_dir', type=str, default='../splits',
-                        help='Output directory (default: ../splits)')
-    parser.add_argument('--processed_dir', type=str, default='../processed',
-                        help='Processed data directory (default: ../processed)')
+    parser.add_argument('--output_dir', type=str, default=os.path.join(DATA_DIR, 'splits'),
+                        help='Output directory (default: <repo>/data/splits)')
+    parser.add_argument('--processed_dir', type=str, default=os.path.join(DATA_DIR, 'processed'),
+                        help='Processed data directory (default: <repo>/data/processed)')
     
     args = parser.parse_args()
     

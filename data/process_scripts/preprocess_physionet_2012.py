@@ -1,10 +1,19 @@
 from tqdm import tqdm
+import argparse
 import os
 import pandas as pd
 import pickle
 
 
-RAW_DATA_PATH = '/home/xiejun/data/challenge-2012'
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROCESSED_PATH = os.path.join(SCRIPT_DIR, '..', 'processed')
+parser = argparse.ArgumentParser(description='Preprocess PhysioNet Challenge 2012.')
+parser.add_argument(
+    '--raw_data_path',
+    default=os.environ.get('P12_RAW_DATA', os.path.join(SCRIPT_DIR, '..', 'raw', 'challenge-2012')),
+    help='Directory containing set-a/b/c and Outcomes-*.txt.',
+)
+RAW_DATA_PATH = parser.parse_args().raw_data_path
 
 def read_ts(raw_data_path, set_name):
     ts = []
@@ -63,8 +72,8 @@ ts = ts.sort_values(['ts_id', 'minute']).reset_index(drop=True)
 oc = oc.sort_values('ts_id').reset_index(drop=True)
 
 # Store data (splits are now generated separately via generate_splits.py)
-os.makedirs('../processed', exist_ok=True)
-pickle.dump([ts, oc], 
-            open('../processed/physionet_2012.pkl','wb'))
+os.makedirs(PROCESSED_PATH, exist_ok=True)
+output_path = os.path.join(PROCESSED_PATH, 'physionet_2012.pkl')
+pickle.dump([ts, oc], open(output_path, 'wb'))
 print(f'Saved {len(ts)} records, {len(oc)} outcomes')
 print('Note: Run generate_splits.py to create train/val/test splits')

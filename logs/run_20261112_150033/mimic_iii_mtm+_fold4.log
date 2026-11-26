@@ -1,0 +1,142 @@
+18/11/2026 02:56:10 >> Namespace(dataset='mimic_iii', model_type='mtm', split_file='mimic_iii_5fold.json', fold=4, root_dir='/home/xiejun/codeLib/DBVT', output_dir='/home/xiejun/codeLib/DBVT/outputs/mimic_iii/mtm+|fold:4', eval_batch_size=64, max_epochs=20, patience=5, validate_every=None, max_obs=880, max_timesteps=880, device='cuda:0', seed=2026, override=[], ablation_mode=None, variable_drop_rate=0.0, variable_drop_seed=None, output_model_type='mtm+', plus_ablation_mode='full', config_model_type='mtm+', branch2_enable=True, hid_dim=128, r_hid=8, dropout=0.1, down_mode='avg', num_mtm_layers=4, downsample_ratio=4, lr=0.0007, train_batch_size=32, grad_clip_norm=3.0, logger=<utils.logger.Logger object at 0x716b1afe0730>)
+
+18/11/2026 02:56:10 >> Preparing dataset mimic_iii
+18/11/2026 02:56:45 >> Using fold 4/5
+18/11/2026 02:56:45 >> Loaded splits from mimic_iii_5fold.json
+18/11/2026 02:57:12 >> # train, val, test TS: [33762, 8436, 10673]
+18/11/2026 02:57:32 >> pos class weight: 7.0482
+18/11/2026 02:57:32 >> % pos class in train, val, test splits: [0.1243, 0.1193, 0.1223]
+18/11/2026 02:57:34 >> # static features: 3
+18/11/2026 02:57:43 >> # TS variables: 127
+
+18/11/2026 02:58:35 >> Model details:
+18/11/2026 02:58:35 >> # parameters: 2049541
+18/11/2026 02:58:35 >> # trainable parameters: 2049541, 100.0%
+18/11/2026 02:58:35 >> #params by dtype:
+18/11/2026 02:58:35 >> torch.float32: 2049541, 100.0%
+
+18/11/2026 02:58:35 >> No. of training batches per epoch = 1056
+
+18/11/2026 02:58:35 >> ============================================================
+18/11/2026 02:58:35 >>                Starting training...
+18/11/2026 02:58:35 >> ============================================================
+18/11/2026 02:58:35 >> >>> Epoch 1/20
+18/11/2026 03:01:28 >> Epoch 1 completed | Avg Loss: 1.6228
+18/11/2026 03:01:32 >> EVAL_TRAIN   Epoch:     1 | AUROC: 0.9156 | AUPRC: 0.6563 | MinRP: 0.6076
+18/11/2026 03:01:46 >> VAL          Epoch:     1 | AUROC: 0.8993 | AUPRC: 0.6193 | MinRP: 0.5676
+18/11/2026 03:01:46 >> AUPRC improved: 0.0000 ---> 0.6193 (+0.6193)
+18/11/2026 03:01:46 >> Saving checkpoint to /home/xiejun/codeLib/DBVT/outputs/mimic_iii/mtm+|fold:4/checkpoint_best.bin
+18/11/2026 03:01:47 >> ============================================================
+18/11/2026 03:01:47 >> >>> Epoch 2/20
+18/11/2026 03:04:38 >> Epoch 2 completed | Avg Loss: 1.4371
+18/11/2026 03:04:41 >> EVAL_TRAIN   Epoch:     2 | AUROC: 0.9211 | AUPRC: 0.6666 | MinRP: 0.6189
+18/11/2026 03:04:55 >> VAL          Epoch:     2 | AUROC: 0.9045 | AUPRC: 0.6459 | MinRP: 0.5839
+18/11/2026 03:04:55 >> AUPRC improved: 0.6193 ---> 0.6459 (+0.0266)
+18/11/2026 03:04:55 >> Saving checkpoint to /home/xiejun/codeLib/DBVT/outputs/mimic_iii/mtm+|fold:4/checkpoint_best.bin
+18/11/2026 03:04:55 >> ============================================================
+18/11/2026 03:04:55 >> >>> Epoch 3/20
+18/11/2026 03:07:46 >> Epoch 3 completed | Avg Loss: 1.3861
+18/11/2026 03:07:49 >> EVAL_TRAIN   Epoch:     3 | AUROC: 0.9243 | AUPRC: 0.6889 | MinRP: 0.6414
+18/11/2026 03:08:03 >> VAL          Epoch:     3 | AUROC: 0.9051 | AUPRC: 0.6475 | MinRP: 0.5809
+18/11/2026 03:08:03 >> AUPRC improved: 0.6459 ---> 0.6475 (+0.0016)
+18/11/2026 03:08:03 >> Saving checkpoint to /home/xiejun/codeLib/DBVT/outputs/mimic_iii/mtm+|fold:4/checkpoint_best.bin
+18/11/2026 03:08:03 >> ============================================================
+18/11/2026 03:08:03 >> >>> Epoch 4/20
+18/11/2026 03:10:53 >> Epoch 4 completed | Avg Loss: 1.3447
+18/11/2026 03:10:57 >> EVAL_TRAIN   Epoch:     4 | AUROC: 0.9313 | AUPRC: 0.7030 | MinRP: 0.6475
+18/11/2026 03:11:10 >> VAL          Epoch:     4 | AUROC: 0.9080 | AUPRC: 0.6542 | MinRP: 0.5905
+18/11/2026 03:11:10 >> AUPRC improved: 0.6475 ---> 0.6542 (+0.0067)
+18/11/2026 03:11:10 >> Saving checkpoint to /home/xiejun/codeLib/DBVT/outputs/mimic_iii/mtm+|fold:4/checkpoint_best.bin
+18/11/2026 03:11:11 >> ============================================================
+18/11/2026 03:11:11 >> >>> Epoch 5/20
+18/11/2026 03:14:01 >> Epoch 5 completed | Avg Loss: 1.3198
+18/11/2026 03:14:05 >> EVAL_TRAIN   Epoch:     5 | AUROC: 0.9319 | AUPRC: 0.7124 | MinRP: 0.6456
+18/11/2026 03:14:19 >> VAL          Epoch:     5 | AUROC: 0.9087 | AUPRC: 0.6622 | MinRP: 0.5899
+18/11/2026 03:14:19 >> AUPRC improved: 0.6542 ---> 0.6622 (+0.0079)
+18/11/2026 03:14:19 >> Saving checkpoint to /home/xiejun/codeLib/DBVT/outputs/mimic_iii/mtm+|fold:4/checkpoint_best.bin
+18/11/2026 03:14:19 >> ============================================================
+18/11/2026 03:14:19 >> >>> Epoch 6/20
+18/11/2026 03:17:11 >> Epoch 6 completed | Avg Loss: 1.3093
+18/11/2026 03:17:15 >> EVAL_TRAIN   Epoch:     6 | AUROC: 0.9396 | AUPRC: 0.7221 | MinRP: 0.6414
+18/11/2026 03:17:29 >> VAL          Epoch:     6 | AUROC: 0.9096 | AUPRC: 0.6624 | MinRP: 0.5885
+18/11/2026 03:17:29 >> AUPRC improved: 0.6622 ---> 0.6624 (+0.0002)
+18/11/2026 03:17:29 >> Saving checkpoint to /home/xiejun/codeLib/DBVT/outputs/mimic_iii/mtm+|fold:4/checkpoint_best.bin
+18/11/2026 03:17:29 >> ============================================================
+18/11/2026 03:17:29 >> >>> Epoch 7/20
+18/11/2026 03:20:20 >> Epoch 7 completed | Avg Loss: 1.2851
+18/11/2026 03:20:24 >> EVAL_TRAIN   Epoch:     7 | AUROC: 0.9401 | AUPRC: 0.7374 | MinRP: 0.6667
+18/11/2026 03:20:37 >> VAL          Epoch:     7 | AUROC: 0.9104 | AUPRC: 0.6683 | MinRP: 0.6034
+18/11/2026 03:20:37 >> AUPRC improved: 0.6624 ---> 0.6683 (+0.0059)
+18/11/2026 03:20:37 >> Saving checkpoint to /home/xiejun/codeLib/DBVT/outputs/mimic_iii/mtm+|fold:4/checkpoint_best.bin
+18/11/2026 03:20:38 >> ============================================================
+18/11/2026 03:20:38 >> >>> Epoch 8/20
+18/11/2026 03:23:29 >> Epoch 8 completed | Avg Loss: 1.2595
+18/11/2026 03:23:33 >> EVAL_TRAIN   Epoch:     8 | AUROC: 0.9466 | AUPRC: 0.7478 | MinRP: 0.6667
+18/11/2026 03:23:46 >> VAL          Epoch:     8 | AUROC: 0.9088 | AUPRC: 0.6629 | MinRP: 0.5954
+18/11/2026 03:23:46 >> No improvement. Wait: 4/5
+18/11/2026 03:23:46 >> ============================================================
+18/11/2026 03:23:46 >> >>> Epoch 9/20
+18/11/2026 03:26:37 >> Epoch 9 completed | Avg Loss: 1.2537
+18/11/2026 03:26:41 >> EVAL_TRAIN   Epoch:     9 | AUROC: 0.9481 | AUPRC: 0.7407 | MinRP: 0.6624
+18/11/2026 03:26:55 >> VAL          Epoch:     9 | AUROC: 0.9095 | AUPRC: 0.6692 | MinRP: 0.5938
+18/11/2026 03:26:55 >> AUPRC improved: 0.6683 ---> 0.6692 (+0.0009)
+18/11/2026 03:26:55 >> Saving checkpoint to /home/xiejun/codeLib/DBVT/outputs/mimic_iii/mtm+|fold:4/checkpoint_best.bin
+18/11/2026 03:26:55 >> ============================================================
+18/11/2026 03:26:55 >> >>> Epoch 10/20
+18/11/2026 03:29:47 >> Epoch 10 completed | Avg Loss: 1.2337
+18/11/2026 03:29:50 >> EVAL_TRAIN   Epoch:    10 | AUROC: 0.9502 | AUPRC: 0.7668 | MinRP: 0.7059
+18/11/2026 03:30:04 >> VAL          Epoch:    10 | AUROC: 0.9090 | AUPRC: 0.6671 | MinRP: 0.5905
+18/11/2026 03:30:04 >> No improvement. Wait: 4/5
+18/11/2026 03:30:04 >> ============================================================
+18/11/2026 03:30:04 >> >>> Epoch 11/20
+18/11/2026 03:32:56 >> Epoch 11 completed | Avg Loss: 1.2179
+18/11/2026 03:32:59 >> EVAL_TRAIN   Epoch:    11 | AUROC: 0.9541 | AUPRC: 0.7686 | MinRP: 0.6878
+18/11/2026 03:33:13 >> VAL          Epoch:    11 | AUROC: 0.9057 | AUPRC: 0.6619 | MinRP: 0.5934
+18/11/2026 03:33:13 >> No improvement. Wait: 3/5
+18/11/2026 03:33:13 >> ============================================================
+18/11/2026 03:33:13 >> >>> Epoch 12/20
+18/11/2026 03:36:04 >> Epoch 12 completed | Avg Loss: 1.1973
+18/11/2026 03:36:07 >> EVAL_TRAIN   Epoch:    12 | AUROC: 0.9589 | AUPRC: 0.7792 | MinRP: 0.7261
+18/11/2026 03:36:21 >> VAL          Epoch:    12 | AUROC: 0.9094 | AUPRC: 0.6676 | MinRP: 0.5895
+18/11/2026 03:36:21 >> No improvement. Wait: 2/5
+18/11/2026 03:36:21 >> ============================================================
+18/11/2026 03:36:21 >> >>> Epoch 13/20
+18/11/2026 03:39:11 >> Epoch 13 completed | Avg Loss: 1.1765
+18/11/2026 03:39:15 >> EVAL_TRAIN   Epoch:    13 | AUROC: 0.9630 | AUPRC: 0.7966 | MinRP: 0.7353
+18/11/2026 03:39:29 >> VAL          Epoch:    13 | AUROC: 0.8997 | AUPRC: 0.6497 | MinRP: 0.5765
+18/11/2026 03:39:29 >> No improvement. Wait: 1/5
+18/11/2026 03:39:29 >> ============================================================
+18/11/2026 03:39:29 >> >>> Epoch 14/20
+18/11/2026 03:42:19 >> Epoch 14 completed | Avg Loss: 1.1759
+18/11/2026 03:42:22 >> EVAL_TRAIN   Epoch:    14 | AUROC: 0.9656 | AUPRC: 0.8019 | MinRP: 0.7426
+18/11/2026 03:42:36 >> VAL          Epoch:    14 | AUROC: 0.9055 | AUPRC: 0.6604 | MinRP: 0.5905
+18/11/2026 03:42:36 >> No improvement. Wait: 0/5
+18/11/2026 03:42:36 >> Patience reached. Early stopping.
+
+18/11/2026 03:42:36 >> ============================================================
+18/11/2026 03:42:36 >> TRAINING COMPLETED
+18/11/2026 03:42:36 >> ============================================================
+18/11/2026 03:42:36 >> Best Validation Results:
+18/11/2026 03:42:36 >>   AUROC: 0.9095 | AUPRC: 0.6692 | MinRP: 0.5938
+18/11/2026 03:42:36 >> Loading best model from /home/xiejun/codeLib/DBVT/outputs/mimic_iii/mtm+|fold:4/checkpoint_best.bin
+18/11/2026 03:42:36 >> Evaluating on test set...
+18/11/2026 03:42:54 >> TEST         AUROC: 0.9192 | AUPRC: 0.6999 | MinRP: 0.6217 | Accuracy: 0.8367
+
+18/11/2026 03:42:54 >> ============================================================
+18/11/2026 03:42:54 >> Classification Report:
+18/11/2026 03:42:54 >>               precision    recall  f1-score   support
+18/11/2026 03:42:54 >> 
+18/11/2026 03:42:54 >>          0.0     0.9725    0.8376    0.9000      9368
+18/11/2026 03:42:54 >>          1.0     0.4159    0.8299    0.5541      1305
+18/11/2026 03:42:54 >> 
+18/11/2026 03:42:54 >>     accuracy                         0.8367     10673
+18/11/2026 03:42:54 >>    macro avg     0.6942    0.8338    0.7271     10673
+18/11/2026 03:42:54 >> weighted avg     0.9044    0.8367    0.8577     10673
+18/11/2026 03:42:54 >> 
+18/11/2026 03:42:54 >> Confusion Matrix:
+18/11/2026 03:42:54 >> [7847, 1521]
+18/11/2026 03:42:54 >> [222, 1083]
+18/11/2026 03:42:54 >> ============================================================
+18/11/2026 03:42:54 >> Final Test Results:
+18/11/2026 03:42:54 >>   AUROC: 0.9192 | AUPRC: 0.6999 | MinRP: 0.6217 | Accuracy: 0.8367
+18/11/2026 03:42:54 >> ============================================================

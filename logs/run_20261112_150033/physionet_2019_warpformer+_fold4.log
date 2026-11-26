@@ -1,0 +1,183 @@
+15/11/2026 02:05:11 >> Namespace(dataset='physionet_2019', model_type='warpformer', split_file='physionet_2019_5fold.json', fold=4, root_dir='/home/xiejun/codeLib/DBVT', output_dir='/home/xiejun/codeLib/DBVT/outputs/physionet_2019/warpformer+|fold:4', eval_batch_size=64, max_epochs=20, patience=5, validate_every=None, max_obs=880, max_timesteps=880, device='cuda:0', seed=2026, override=[], ablation_mode=None, variable_drop_rate=0.0, variable_drop_seed=None, output_model_type='warpformer+', plus_ablation_mode='full', config_model_type='warpformer+', branch2_enable=True, hid_dim=32, num_layers=2, num_heads=8, dropout=0.1, lr=0.0007, train_batch_size=32, grad_clip_norm=0.3, warp_num_max=10, warpfunc='l1', warpact='sigmoid', nonneg_trans='abs', warp_full_attn=False, logger=<utils.logger.Logger object at 0x796da4fe0730>)
+
+15/11/2026 02:05:11 >> Preparing dataset physionet_2019
+15/11/2026 02:05:11 >> Using fold 4/5
+15/11/2026 02:05:11 >> Loaded splits from physionet_2019_5fold.json
+15/11/2026 02:05:14 >> # train, val, test TS: [24688, 6172, 7715]
+15/11/2026 02:05:15 >> pos class weight: 26.5229
+15/11/2026 02:05:15 >> % pos class in train, val, test splits: [0.0363, 0.0413, 0.0377]
+15/11/2026 02:05:16 >> # static features: 5
+15/11/2026 02:05:16 >> # TS variables (Warpformer): 34
+15/11/2026 02:05:20 >> # timesteps (Warpformer): 61
+warp_num:  [0, 12] 	 warp_layer_num: 2
+
+15/11/2026 02:05:59 >> Model details:
+15/11/2026 02:05:59 >> # parameters: 334702
+15/11/2026 02:05:59 >> # trainable parameters: 334702, 100.0%
+15/11/2026 02:05:59 >> #params by dtype:
+15/11/2026 02:05:59 >> torch.float32: 334702, 100.0%
+
+15/11/2026 02:05:59 >> No. of training batches per epoch = 772
+
+15/11/2026 02:05:59 >> ============================================================
+15/11/2026 02:05:59 >>                Starting training...
+15/11/2026 02:05:59 >> ============================================================
+15/11/2026 02:05:59 >> >>> Epoch 1/20
+15/11/2026 02:08:20 >> Epoch 1 completed | Avg Loss: 2.7964
+15/11/2026 02:08:24 >> EVAL_TRAIN   Epoch:     1 | AUROC: 0.8413 | AUPRC: 0.4066 | MinRP: 0.4250
+15/11/2026 02:08:32 >> VAL          Epoch:     1 | AUROC: 0.8505 | AUPRC: 0.4035 | MinRP: 0.4280
+15/11/2026 02:08:32 >> AUPRC improved: 0.0000 ---> 0.4035 (+0.4035)
+15/11/2026 02:08:32 >> Saving checkpoint to /home/xiejun/codeLib/DBVT/outputs/physionet_2019/warpformer+|fold:4/checkpoint_best.bin
+15/11/2026 02:08:32 >> ============================================================
+15/11/2026 02:08:32 >> >>> Epoch 2/20
+15/11/2026 02:10:51 >> Epoch 2 completed | Avg Loss: 2.7925
+15/11/2026 02:10:53 >> EVAL_TRAIN   Epoch:     2 | AUROC: 0.8688 | AUPRC: 0.4756 | MinRP: 0.4375
+15/11/2026 02:11:01 >> VAL          Epoch:     2 | AUROC: 0.8677 | AUPRC: 0.4571 | MinRP: 0.4627
+15/11/2026 02:11:01 >> AUPRC improved: 0.4035 ---> 0.4571 (+0.0536)
+15/11/2026 02:11:01 >> Saving checkpoint to /home/xiejun/codeLib/DBVT/outputs/physionet_2019/warpformer+|fold:4/checkpoint_best.bin
+15/11/2026 02:11:01 >> ============================================================
+15/11/2026 02:11:01 >> >>> Epoch 3/20
+15/11/2026 02:13:20 >> Epoch 3 completed | Avg Loss: 2.7164
+15/11/2026 02:13:23 >> EVAL_TRAIN   Epoch:     3 | AUROC: 0.8773 | AUPRC: 0.4955 | MinRP: 0.4568
+15/11/2026 02:13:30 >> VAL          Epoch:     3 | AUROC: 0.8778 | AUPRC: 0.4744 | MinRP: 0.4863
+15/11/2026 02:13:30 >> AUPRC improved: 0.4571 ---> 0.4744 (+0.0174)
+15/11/2026 02:13:30 >> Saving checkpoint to /home/xiejun/codeLib/DBVT/outputs/physionet_2019/warpformer+|fold:4/checkpoint_best.bin
+15/11/2026 02:13:30 >> ============================================================
+15/11/2026 02:13:30 >> >>> Epoch 4/20
+15/11/2026 02:15:49 >> Epoch 4 completed | Avg Loss: 2.8200
+15/11/2026 02:15:52 >> EVAL_TRAIN   Epoch:     4 | AUROC: 0.8868 | AUPRC: 0.5027 | MinRP: 0.4625
+15/11/2026 02:16:00 >> VAL          Epoch:     4 | AUROC: 0.8755 | AUPRC: 0.4792 | MinRP: 0.4824
+15/11/2026 02:16:00 >> AUPRC improved: 0.4744 ---> 0.4792 (+0.0048)
+15/11/2026 02:16:00 >> Saving checkpoint to /home/xiejun/codeLib/DBVT/outputs/physionet_2019/warpformer+|fold:4/checkpoint_best.bin
+15/11/2026 02:16:00 >> ============================================================
+15/11/2026 02:16:00 >> >>> Epoch 5/20
+15/11/2026 02:18:18 >> Epoch 5 completed | Avg Loss: 2.7125
+15/11/2026 02:18:20 >> EVAL_TRAIN   Epoch:     5 | AUROC: 0.8848 | AUPRC: 0.5139 | MinRP: 0.4625
+15/11/2026 02:18:28 >> VAL          Epoch:     5 | AUROC: 0.8780 | AUPRC: 0.4909 | MinRP: 0.4766
+15/11/2026 02:18:28 >> AUPRC improved: 0.4792 ---> 0.4909 (+0.0116)
+15/11/2026 02:18:28 >> Saving checkpoint to /home/xiejun/codeLib/DBVT/outputs/physionet_2019/warpformer+|fold:4/checkpoint_best.bin
+15/11/2026 02:18:28 >> ============================================================
+15/11/2026 02:18:28 >> >>> Epoch 6/20
+15/11/2026 02:20:47 >> Epoch 6 completed | Avg Loss: 2.8380
+15/11/2026 02:20:50 >> EVAL_TRAIN   Epoch:     6 | AUROC: 0.8928 | AUPRC: 0.4966 | MinRP: 0.4691
+15/11/2026 02:20:57 >> VAL          Epoch:     6 | AUROC: 0.8818 | AUPRC: 0.4862 | MinRP: 0.5078
+15/11/2026 02:20:57 >> No improvement. Wait: 4/5
+15/11/2026 02:20:57 >> ============================================================
+15/11/2026 02:20:57 >> >>> Epoch 7/20
+15/11/2026 02:23:15 >> Epoch 7 completed | Avg Loss: 2.7547
+15/11/2026 02:23:18 >> EVAL_TRAIN   Epoch:     7 | AUROC: 0.9000 | AUPRC: 0.5153 | MinRP: 0.4598
+15/11/2026 02:23:26 >> VAL          Epoch:     7 | AUROC: 0.8878 | AUPRC: 0.4952 | MinRP: 0.4981
+15/11/2026 02:23:26 >> AUPRC improved: 0.4909 ---> 0.4952 (+0.0043)
+15/11/2026 02:23:26 >> Saving checkpoint to /home/xiejun/codeLib/DBVT/outputs/physionet_2019/warpformer+|fold:4/checkpoint_best.bin
+15/11/2026 02:23:26 >> ============================================================
+15/11/2026 02:23:26 >> >>> Epoch 8/20
+15/11/2026 02:25:45 >> Epoch 8 completed | Avg Loss: 2.7670
+15/11/2026 02:25:47 >> EVAL_TRAIN   Epoch:     8 | AUROC: 0.8962 | AUPRC: 0.5122 | MinRP: 0.4368
+15/11/2026 02:25:55 >> VAL          Epoch:     8 | AUROC: 0.8866 | AUPRC: 0.4991 | MinRP: 0.5059
+15/11/2026 02:25:55 >> AUPRC improved: 0.4952 ---> 0.4991 (+0.0039)
+15/11/2026 02:25:55 >> Saving checkpoint to /home/xiejun/codeLib/DBVT/outputs/physionet_2019/warpformer+|fold:4/checkpoint_best.bin
+15/11/2026 02:25:55 >> ============================================================
+15/11/2026 02:25:55 >> >>> Epoch 9/20
+15/11/2026 02:28:14 >> Epoch 9 completed | Avg Loss: 2.9567
+15/11/2026 02:28:16 >> EVAL_TRAIN   Epoch:     9 | AUROC: 0.9042 | AUPRC: 0.5373 | MinRP: 0.5062
+15/11/2026 02:28:24 >> VAL          Epoch:     9 | AUROC: 0.8820 | AUPRC: 0.4805 | MinRP: 0.4864
+15/11/2026 02:28:24 >> No improvement. Wait: 4/5
+15/11/2026 02:28:24 >> ============================================================
+15/11/2026 02:28:24 >> >>> Epoch 10/20
+15/11/2026 02:30:40 >> Epoch 10 completed | Avg Loss: 2.9843
+15/11/2026 02:30:43 >> EVAL_TRAIN   Epoch:    10 | AUROC: 0.8987 | AUPRC: 0.5349 | MinRP: 0.4938
+15/11/2026 02:30:50 >> VAL          Epoch:    10 | AUROC: 0.8820 | AUPRC: 0.4949 | MinRP: 0.4961
+15/11/2026 02:30:50 >> No improvement. Wait: 3/5
+15/11/2026 02:30:50 >> ============================================================
+15/11/2026 02:30:50 >> >>> Epoch 11/20
+15/11/2026 02:33:09 >> Epoch 11 completed | Avg Loss: 2.7850
+15/11/2026 02:33:11 >> EVAL_TRAIN   Epoch:    11 | AUROC: 0.8916 | AUPRC: 0.5380 | MinRP: 0.4875
+15/11/2026 02:33:19 >> VAL          Epoch:    11 | AUROC: 0.8815 | AUPRC: 0.5002 | MinRP: 0.5000
+15/11/2026 02:33:19 >> AUPRC improved: 0.4991 ---> 0.5002 (+0.0010)
+15/11/2026 02:33:19 >> Saving checkpoint to /home/xiejun/codeLib/DBVT/outputs/physionet_2019/warpformer+|fold:4/checkpoint_best.bin
+15/11/2026 02:33:19 >> ============================================================
+15/11/2026 02:33:19 >> >>> Epoch 12/20
+15/11/2026 02:35:37 >> Epoch 12 completed | Avg Loss: 2.6521
+15/11/2026 02:35:40 >> EVAL_TRAIN   Epoch:    12 | AUROC: 0.9114 | AUPRC: 0.5845 | MinRP: 0.5375
+15/11/2026 02:35:48 >> VAL          Epoch:    12 | AUROC: 0.8831 | AUPRC: 0.5089 | MinRP: 0.4863
+15/11/2026 02:35:48 >> AUPRC improved: 0.5002 ---> 0.5089 (+0.0088)
+15/11/2026 02:35:48 >> Saving checkpoint to /home/xiejun/codeLib/DBVT/outputs/physionet_2019/warpformer+|fold:4/checkpoint_best.bin
+15/11/2026 02:35:48 >> ============================================================
+15/11/2026 02:35:48 >> >>> Epoch 13/20
+15/11/2026 02:38:06 >> Epoch 13 completed | Avg Loss: 2.9178
+15/11/2026 02:38:09 >> EVAL_TRAIN   Epoch:    13 | AUROC: 0.9231 | AUPRC: 0.6028 | MinRP: 0.5750
+15/11/2026 02:38:16 >> VAL          Epoch:    13 | AUROC: 0.8786 | AUPRC: 0.4981 | MinRP: 0.4784
+15/11/2026 02:38:16 >> No improvement. Wait: 4/5
+15/11/2026 02:38:16 >> ============================================================
+15/11/2026 02:38:16 >> >>> Epoch 14/20
+15/11/2026 02:40:35 >> Epoch 14 completed | Avg Loss: 2.7604
+15/11/2026 02:40:38 >> EVAL_TRAIN   Epoch:    14 | AUROC: 0.9275 | AUPRC: 0.6061 | MinRP: 0.5250
+15/11/2026 02:40:45 >> VAL          Epoch:    14 | AUROC: 0.8918 | AUPRC: 0.5196 | MinRP: 0.5116
+15/11/2026 02:40:45 >> AUPRC improved: 0.5089 ---> 0.5196 (+0.0106)
+15/11/2026 02:40:45 >> Saving checkpoint to /home/xiejun/codeLib/DBVT/outputs/physionet_2019/warpformer+|fold:4/checkpoint_best.bin
+15/11/2026 02:40:45 >> ============================================================
+15/11/2026 02:40:45 >> >>> Epoch 15/20
+15/11/2026 02:43:04 >> Epoch 15 completed | Avg Loss: 2.8231
+15/11/2026 02:43:07 >> EVAL_TRAIN   Epoch:    15 | AUROC: 0.9221 | AUPRC: 0.6244 | MinRP: 0.6000
+15/11/2026 02:43:14 >> VAL          Epoch:    15 | AUROC: 0.8865 | AUPRC: 0.5113 | MinRP: 0.5020
+15/11/2026 02:43:14 >> No improvement. Wait: 4/5
+15/11/2026 02:43:14 >> ============================================================
+15/11/2026 02:43:14 >> >>> Epoch 16/20
+15/11/2026 02:45:33 >> Epoch 16 completed | Avg Loss: 2.6894
+15/11/2026 02:45:36 >> EVAL_TRAIN   Epoch:    16 | AUROC: 0.9304 | AUPRC: 0.6558 | MinRP: 0.6000
+15/11/2026 02:45:43 >> VAL          Epoch:    16 | AUROC: 0.8763 | AUPRC: 0.5056 | MinRP: 0.4980
+15/11/2026 02:45:43 >> No improvement. Wait: 3/5
+15/11/2026 02:45:43 >> ============================================================
+15/11/2026 02:45:43 >> >>> Epoch 17/20
+15/11/2026 02:48:02 >> Epoch 17 completed | Avg Loss: 2.7650
+15/11/2026 02:48:04 >> EVAL_TRAIN   Epoch:    17 | AUROC: 0.9264 | AUPRC: 0.6471 | MinRP: 0.5625
+15/11/2026 02:48:12 >> VAL          Epoch:    17 | AUROC: 0.8694 | AUPRC: 0.4881 | MinRP: 0.4884
+15/11/2026 02:48:12 >> No improvement. Wait: 2/5
+15/11/2026 02:48:12 >> ============================================================
+15/11/2026 02:48:12 >> >>> Epoch 18/20
+15/11/2026 02:50:30 >> Epoch 18 completed | Avg Loss: 2.9307
+15/11/2026 02:50:33 >> EVAL_TRAIN   Epoch:    18 | AUROC: 0.9432 | AUPRC: 0.6581 | MinRP: 0.5952
+15/11/2026 02:50:41 >> VAL          Epoch:    18 | AUROC: 0.8828 | AUPRC: 0.5258 | MinRP: 0.5137
+15/11/2026 02:50:41 >> AUPRC improved: 0.5196 ---> 0.5258 (+0.0062)
+15/11/2026 02:50:41 >> Saving checkpoint to /home/xiejun/codeLib/DBVT/outputs/physionet_2019/warpformer+|fold:4/checkpoint_best.bin
+15/11/2026 02:50:41 >> ============================================================
+15/11/2026 02:50:41 >> >>> Epoch 19/20
+15/11/2026 02:53:00 >> Epoch 19 completed | Avg Loss: 2.6345
+15/11/2026 02:53:02 >> EVAL_TRAIN   Epoch:    19 | AUROC: 0.9432 | AUPRC: 0.7236 | MinRP: 0.7000
+15/11/2026 02:53:10 >> VAL          Epoch:    19 | AUROC: 0.8727 | AUPRC: 0.4796 | MinRP: 0.4667
+15/11/2026 02:53:10 >> No improvement. Wait: 4/5
+15/11/2026 02:53:10 >> ============================================================
+15/11/2026 02:53:10 >> >>> Epoch 20/20
+15/11/2026 02:55:29 >> Epoch 20 completed | Avg Loss: 2.8393
+15/11/2026 02:55:32 >> EVAL_TRAIN   Epoch:    20 | AUROC: 0.9431 | AUPRC: 0.7173 | MinRP: 0.6750
+15/11/2026 02:55:40 >> VAL          Epoch:    20 | AUROC: 0.8731 | AUPRC: 0.4976 | MinRP: 0.4829
+15/11/2026 02:55:40 >> No improvement. Wait: 3/5
+15/11/2026 02:55:40 >> ============================================================
+
+15/11/2026 02:55:40 >> ============================================================
+15/11/2026 02:55:40 >> TRAINING COMPLETED
+15/11/2026 02:55:40 >> ============================================================
+15/11/2026 02:55:40 >> Best Validation Results:
+15/11/2026 02:55:40 >>   AUROC: 0.8828 | AUPRC: 0.5258 | MinRP: 0.5137
+15/11/2026 02:55:40 >> Loading best model from /home/xiejun/codeLib/DBVT/outputs/physionet_2019/warpformer+|fold:4/checkpoint_best.bin
+15/11/2026 02:55:40 >> Evaluating on test set...
+15/11/2026 02:55:49 >> TEST         AUROC: 0.8887 | AUPRC: 0.4935 | MinRP: 0.4814 | Accuracy: 0.9702
+
+15/11/2026 02:55:49 >> ============================================================
+15/11/2026 02:55:49 >> Classification Report:
+15/11/2026 02:55:49 >>               precision    recall  f1-score   support
+15/11/2026 02:55:49 >> 
+15/11/2026 02:55:49 >>          0.0     0.9739    0.9957    0.9847      7424
+15/11/2026 02:55:49 >>          1.0     0.7440    0.3196    0.4471       291
+15/11/2026 02:55:49 >> 
+15/11/2026 02:55:49 >>     accuracy                         0.9702      7715
+15/11/2026 02:55:49 >>    macro avg     0.8590    0.6576    0.7159      7715
+15/11/2026 02:55:49 >> weighted avg     0.9652    0.9702    0.9644      7715
+15/11/2026 02:55:49 >> 
+15/11/2026 02:55:49 >> Confusion Matrix:
+15/11/2026 02:55:49 >> [7392, 32]
+15/11/2026 02:55:49 >> [198, 93]
+15/11/2026 02:55:49 >> ============================================================
+15/11/2026 02:55:49 >> Final Test Results:
+15/11/2026 02:55:49 >>   AUROC: 0.8887 | AUPRC: 0.4935 | MinRP: 0.4814 | Accuracy: 0.9702
+15/11/2026 02:55:49 >> ============================================================

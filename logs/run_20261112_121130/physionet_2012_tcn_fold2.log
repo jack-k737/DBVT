@@ -1,0 +1,28 @@
+12/11/2026 12:11:34 >> Namespace(dataset='physionet_2012', model_type='tcn', split_file='physionet_2012_5fold.json', fold=2, root_dir='/home/xiejun/codeLib/DBVT', output_dir='/home/xiejun/codeLib/DBVT/outputs/physionet_2012/tcn|fold:2', eval_batch_size=64, max_epochs=20, patience=5, validate_every=None, max_obs=880, max_timesteps=880, device='cuda:1', seed=2026, override=[], ablation_mode=None, variable_drop_rate=0.0, variable_drop_seed=None, output_model_type='tcn', plus_ablation_mode='full', config_model_type='tcn', branch2_enable=False, hid_dim=64, num_layers=4, kernel_size=3, dropout=0.2, lr=0.001, train_batch_size=32, grad_clip_norm=1.0, logger=<utils.logger.Logger object at 0x7b4733fe0730>)
+
+12/11/2026 12:11:34 >> Preparing dataset physionet_2012
+12/11/2026 12:11:35 >> Using fold 2/5
+12/11/2026 12:11:35 >> Loaded splits from physionet_2012_5fold.json
+12/11/2026 12:11:38 >> # train, val, test TS: [7673, 1918, 2397]
+12/11/2026 12:11:38 >> pos class weight: 5.8265
+12/11/2026 12:11:38 >> % pos class in train, val, test splits: [0.1465, 0.1257, 0.1427]
+12/11/2026 12:11:39 >> # static features: 8
+12/11/2026 12:11:39 >> # TS variables (TCN): 36
+Traceback (most recent call last):
+  File "/home/xiejun/codeLib/DBVT/src/main.py", line 243, in <module>
+    dataset = Dataset(args)
+  File "/home/xiejun/codeLib/DBVT/src/dataset/dataset.py", line 102, in __init__
+    self.adapter.prepare_data(data, self.N, train_ind, var_to_ind, variables)
+  File "/home/xiejun/codeLib/DBVT/src/dataset/adapters/tcn_adapter.py", line 22, in prepare_data
+    data['hour'] = data['minute'].apply(lambda x: max(0, int(x // 60)))
+  File "/home/xiejun/miniconda3/envs/ehrs/lib/python3.10/site-packages/pandas/core/series.py", line 4943, in apply
+    ).apply()
+  File "/home/xiejun/miniconda3/envs/ehrs/lib/python3.10/site-packages/pandas/core/apply.py", line 1422, in apply
+    return self.apply_standard()
+  File "/home/xiejun/miniconda3/envs/ehrs/lib/python3.10/site-packages/pandas/core/apply.py", line 1502, in apply_standard
+    mapped = obj._map_values(
+  File "/home/xiejun/miniconda3/envs/ehrs/lib/python3.10/site-packages/pandas/core/base.py", line 925, in _map_values
+    return algorithms.map_array(arr, mapper, na_action=na_action, convert=convert)
+  File "/home/xiejun/miniconda3/envs/ehrs/lib/python3.10/site-packages/pandas/core/algorithms.py", line 1743, in map_array
+    return lib.map_infer(values, mapper, convert=convert)
+KeyboardInterrupt

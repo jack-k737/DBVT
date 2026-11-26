@@ -1,0 +1,27 @@
+physionet_2012:
+  hid_dim: 64
+  num_layers: 3
+  num_heads: 4
+  dropout: 0.2
+  attention_dropout: 0.1
+  lr: 0.0002
+  train_batch_size: 16
+  grad_clip_norm: 1.0
+physionet_2019:
+  hid_dim: 64
+  num_layers: 2
+  num_heads: 4
+  dropout: 0.1
+  attention_dropout: 0.05
+  lr: 0.0003
+  train_batch_size: 8
+  grad_clip_norm: 5.0
+mimic_iii:
+  hid_dim: 32
+  num_layers: 4
+  num_heads: 4
+  dropout: 0.1
+  attention_dropout: 0.1
+  lr: 0.0003
+  train_batch_size: 4
+  grad_clip_norm: 5.0

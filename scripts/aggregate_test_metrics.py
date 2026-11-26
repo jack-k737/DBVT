@@ -98,12 +98,6 @@ def _group_key(experiment: str) -> str:
     return first
 
 
-def _display_group_name(group: str) -> str:
-    if group == "transformer+":
-        return "dbvt"
-    return group
-
-
 def _format_float(x: float) -> str:
     if x is None or (isinstance(x, float) and (math.isnan(x) or math.isinf(x))):
         return "nan"
@@ -185,7 +179,7 @@ def main() -> None:
             minrp_mean, minrp_std = _safe_mean(minrps), _safe_std(minrps)
             rows.append(
                 [
-                    _display_group_name(group),
+                    group,
                     str(len(rs)),
                     _format_mean_pm_std(auroc_mean, auroc_std),
                     _format_mean_pm_std(auprc_mean, auprc_std),

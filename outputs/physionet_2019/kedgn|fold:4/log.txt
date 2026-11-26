@@ -1,0 +1,129 @@
+14/11/2026 08:52:21 >> Namespace(dataset='physionet_2019', model_type='kedgn', split_file='physionet_2019_5fold.json', fold=4, root_dir='/home/xiejun/codeLib/DBVT', output_dir='/home/xiejun/codeLib/DBVT/outputs/physionet_2019/kedgn|fold:4', eval_batch_size=64, max_epochs=20, patience=5, validate_every=None, max_obs=880, max_timesteps=880, device='cuda:0', seed=2026, override=[], ablation_mode=None, variable_drop_rate=0.0, variable_drop_seed=None, output_model_type='kedgn', plus_ablation_mode='full', config_model_type='kedgn', branch2_enable=False, hid_dim=16, query_vector_dim=5, node_emb_dim=9, node_enc_layer=2, rarity_alpha=2.0, lr=0.002, train_batch_size=256, grad_clip_norm=1.0, logger=<utils.logger.Logger object at 0x7a0cad9e0730>)
+
+14/11/2026 08:52:21 >> Preparing dataset physionet_2019
+14/11/2026 08:52:22 >> Using fold 4/5
+14/11/2026 08:52:22 >> Loaded splits from physionet_2019_5fold.json
+14/11/2026 08:52:24 >> # train, val, test TS: [24688, 6172, 7715]
+14/11/2026 08:52:25 >> pos class weight: 26.5229
+14/11/2026 08:52:25 >> % pos class in train, val, test splits: [0.0363, 0.0413, 0.0377]
+14/11/2026 08:52:26 >> # static features: 5
+14/11/2026 08:52:27 >> # TS variables(KEDGN): 34
+14/11/2026 08:52:30 >> # intervals (hours): 61
+
+14/11/2026 08:52:49 >> Model details:
+14/11/2026 08:52:49 >> # parameters: 79997
+14/11/2026 08:52:49 >> # trainable parameters: 79997, 100.0%
+14/11/2026 08:52:49 >> #params by dtype:
+14/11/2026 08:52:49 >> torch.float32: 79997, 100.0%
+
+14/11/2026 08:52:49 >> No. of training batches per epoch = 97
+
+14/11/2026 08:52:49 >> ============================================================
+14/11/2026 08:52:49 >>                Starting training...
+14/11/2026 08:52:49 >> ============================================================
+14/11/2026 08:52:49 >> >>> Epoch 1/20
+14/11/2026 08:53:39 >> Epoch 1 completed | Avg Loss: 1.1115
+14/11/2026 08:53:45 >> EVAL_TRAIN   Epoch:     1 | AUROC: 0.8483 | AUPRC: 0.3635 | MinRP: 0.4250
+14/11/2026 08:54:03 >> VAL          Epoch:     1 | AUROC: 0.8457 | AUPRC: 0.3612 | MinRP: 0.4235
+14/11/2026 08:54:03 >> AUPRC improved: 0.0000 ---> 0.3612 (+0.3612)
+14/11/2026 08:54:03 >> Saving checkpoint to /home/xiejun/codeLib/DBVT/outputs/physionet_2019/kedgn|fold:4/checkpoint_best.bin
+14/11/2026 08:54:03 >> ============================================================
+14/11/2026 08:54:03 >> >>> Epoch 2/20
+14/11/2026 08:54:55 >> Epoch 2 completed | Avg Loss: 0.9629
+14/11/2026 08:55:01 >> EVAL_TRAIN   Epoch:     2 | AUROC: 0.8733 | AUPRC: 0.4251 | MinRP: 0.4625
+14/11/2026 08:55:19 >> VAL          Epoch:     2 | AUROC: 0.8661 | AUPRC: 0.4095 | MinRP: 0.4297
+14/11/2026 08:55:19 >> AUPRC improved: 0.3612 ---> 0.4095 (+0.0483)
+14/11/2026 08:55:19 >> Saving checkpoint to /home/xiejun/codeLib/DBVT/outputs/physionet_2019/kedgn|fold:4/checkpoint_best.bin
+14/11/2026 08:55:19 >> ============================================================
+14/11/2026 08:55:19 >> >>> Epoch 3/20
+14/11/2026 08:56:11 >> Epoch 3 completed | Avg Loss: 0.9009
+14/11/2026 08:56:17 >> EVAL_TRAIN   Epoch:     3 | AUROC: 0.8823 | AUPRC: 0.4405 | MinRP: 0.4691
+14/11/2026 08:56:35 >> VAL          Epoch:     3 | AUROC: 0.8705 | AUPRC: 0.4306 | MinRP: 0.4353
+14/11/2026 08:56:35 >> AUPRC improved: 0.4095 ---> 0.4306 (+0.0211)
+14/11/2026 08:56:35 >> Saving checkpoint to /home/xiejun/codeLib/DBVT/outputs/physionet_2019/kedgn|fold:4/checkpoint_best.bin
+14/11/2026 08:56:35 >> ============================================================
+14/11/2026 08:56:35 >> >>> Epoch 4/20
+14/11/2026 08:57:27 >> Epoch 4 completed | Avg Loss: 0.8780
+14/11/2026 08:57:33 >> EVAL_TRAIN   Epoch:     4 | AUROC: 0.8898 | AUPRC: 0.4648 | MinRP: 0.4625
+14/11/2026 08:57:51 >> VAL          Epoch:     4 | AUROC: 0.8751 | AUPRC: 0.4550 | MinRP: 0.4627
+14/11/2026 08:57:51 >> AUPRC improved: 0.4306 ---> 0.4550 (+0.0243)
+14/11/2026 08:57:51 >> Saving checkpoint to /home/xiejun/codeLib/DBVT/outputs/physionet_2019/kedgn|fold:4/checkpoint_best.bin
+14/11/2026 08:57:51 >> ============================================================
+14/11/2026 08:57:51 >> >>> Epoch 5/20
+14/11/2026 08:58:43 >> Epoch 5 completed | Avg Loss: 0.8334
+14/11/2026 08:58:49 >> EVAL_TRAIN   Epoch:     5 | AUROC: 0.9014 | AUPRC: 0.4697 | MinRP: 0.4750
+14/11/2026 08:59:07 >> VAL          Epoch:     5 | AUROC: 0.8721 | AUPRC: 0.4396 | MinRP: 0.4471
+14/11/2026 08:59:07 >> No improvement. Wait: 4/5
+14/11/2026 08:59:07 >> ============================================================
+14/11/2026 08:59:07 >> >>> Epoch 6/20
+14/11/2026 08:59:59 >> Epoch 6 completed | Avg Loss: 0.8113
+14/11/2026 09:00:06 >> EVAL_TRAIN   Epoch:     6 | AUROC: 0.9056 | AUPRC: 0.4945 | MinRP: 0.4875
+14/11/2026 09:00:24 >> VAL          Epoch:     6 | AUROC: 0.8783 | AUPRC: 0.4870 | MinRP: 0.4549
+14/11/2026 09:00:24 >> AUPRC improved: 0.4550 ---> 0.4870 (+0.0320)
+14/11/2026 09:00:24 >> Saving checkpoint to /home/xiejun/codeLib/DBVT/outputs/physionet_2019/kedgn|fold:4/checkpoint_best.bin
+14/11/2026 09:00:24 >> ============================================================
+14/11/2026 09:00:24 >> >>> Epoch 7/20
+14/11/2026 09:01:17 >> Epoch 7 completed | Avg Loss: 0.7762
+14/11/2026 09:01:23 >> EVAL_TRAIN   Epoch:     7 | AUROC: 0.9198 | AUPRC: 0.5186 | MinRP: 0.5000
+14/11/2026 09:01:41 >> VAL          Epoch:     7 | AUROC: 0.8787 | AUPRC: 0.4880 | MinRP: 0.4627
+14/11/2026 09:01:41 >> AUPRC improved: 0.4870 ---> 0.4880 (+0.0010)
+14/11/2026 09:01:41 >> Saving checkpoint to /home/xiejun/codeLib/DBVT/outputs/physionet_2019/kedgn|fold:4/checkpoint_best.bin
+14/11/2026 09:01:41 >> ============================================================
+14/11/2026 09:01:41 >> >>> Epoch 8/20
+14/11/2026 09:02:33 >> Epoch 8 completed | Avg Loss: 0.7434
+14/11/2026 09:02:39 >> EVAL_TRAIN   Epoch:     8 | AUROC: 0.9151 | AUPRC: 0.5216 | MinRP: 0.5000
+14/11/2026 09:02:57 >> VAL          Epoch:     8 | AUROC: 0.8743 | AUPRC: 0.4765 | MinRP: 0.4453
+14/11/2026 09:02:57 >> No improvement. Wait: 4/5
+14/11/2026 09:02:57 >> ============================================================
+14/11/2026 09:02:57 >> >>> Epoch 9/20
+14/11/2026 09:03:50 >> Epoch 9 completed | Avg Loss: 0.7344
+14/11/2026 09:03:56 >> EVAL_TRAIN   Epoch:     9 | AUROC: 0.9212 | AUPRC: 0.5390 | MinRP: 0.5250
+14/11/2026 09:04:14 >> VAL          Epoch:     9 | AUROC: 0.8787 | AUPRC: 0.4666 | MinRP: 0.4510
+14/11/2026 09:04:14 >> No improvement. Wait: 3/5
+14/11/2026 09:04:14 >> ============================================================
+14/11/2026 09:04:14 >> >>> Epoch 10/20
+14/11/2026 09:05:07 >> Epoch 10 completed | Avg Loss: 0.6923
+14/11/2026 09:05:13 >> EVAL_TRAIN   Epoch:    10 | AUROC: 0.9300 | AUPRC: 0.5133 | MinRP: 0.4875
+14/11/2026 09:05:31 >> VAL          Epoch:    10 | AUROC: 0.8632 | AUPRC: 0.4380 | MinRP: 0.4346
+14/11/2026 09:05:31 >> No improvement. Wait: 2/5
+14/11/2026 09:05:31 >> ============================================================
+14/11/2026 09:05:31 >> >>> Epoch 11/20
+14/11/2026 09:06:24 >> Epoch 11 completed | Avg Loss: 0.6643
+14/11/2026 09:06:30 >> EVAL_TRAIN   Epoch:    11 | AUROC: 0.9325 | AUPRC: 0.5449 | MinRP: 0.4875
+14/11/2026 09:06:48 >> VAL          Epoch:    11 | AUROC: 0.8702 | AUPRC: 0.4557 | MinRP: 0.4627
+14/11/2026 09:06:48 >> No improvement. Wait: 1/5
+14/11/2026 09:06:48 >> ============================================================
+14/11/2026 09:06:48 >> >>> Epoch 12/20
+14/11/2026 09:07:40 >> Epoch 12 completed | Avg Loss: 0.6553
+14/11/2026 09:07:46 >> EVAL_TRAIN   Epoch:    12 | AUROC: 0.9409 | AUPRC: 0.5928 | MinRP: 0.5750
+14/11/2026 09:08:04 >> VAL          Epoch:    12 | AUROC: 0.8576 | AUPRC: 0.4799 | MinRP: 0.4627
+14/11/2026 09:08:04 >> No improvement. Wait: 0/5
+14/11/2026 09:08:04 >> Patience reached. Early stopping.
+
+14/11/2026 09:08:04 >> ============================================================
+14/11/2026 09:08:04 >> TRAINING COMPLETED
+14/11/2026 09:08:04 >> ============================================================
+14/11/2026 09:08:04 >> Best Validation Results:
+14/11/2026 09:08:04 >>   AUROC: 0.8787 | AUPRC: 0.4880 | MinRP: 0.4627
+14/11/2026 09:08:04 >> Loading best model from /home/xiejun/codeLib/DBVT/outputs/physionet_2019/kedgn|fold:4/checkpoint_best.bin
+14/11/2026 09:08:04 >> Evaluating on test set...
+14/11/2026 09:08:26 >> TEST         AUROC: 0.8783 | AUPRC: 0.4748 | MinRP: 0.4777 | Accuracy: 0.8714
+
+14/11/2026 09:08:26 >> ============================================================
+14/11/2026 09:08:26 >> Classification Report:
+14/11/2026 09:08:26 >>               precision    recall  f1-score   support
+14/11/2026 09:08:26 >> 
+14/11/2026 09:08:26 >>          0.0     0.9879    0.8772    0.9292      7424
+14/11/2026 09:08:26 >>          1.0     0.1879    0.7251    0.2984       291
+14/11/2026 09:08:26 >> 
+14/11/2026 09:08:26 >>     accuracy                         0.8714      7715
+14/11/2026 09:08:26 >>    macro avg     0.5879    0.8011    0.6138      7715
+14/11/2026 09:08:26 >> weighted avg     0.9577    0.8714    0.9054      7715
+14/11/2026 09:08:26 >> 
+14/11/2026 09:08:26 >> Confusion Matrix:
+14/11/2026 09:08:26 >> [6512, 912]
+14/11/2026 09:08:26 >> [80, 211]
+14/11/2026 09:08:26 >> ============================================================
+14/11/2026 09:08:26 >> Final Test Results:
+14/11/2026 09:08:26 >>   AUROC: 0.8783 | AUPRC: 0.4748 | MinRP: 0.4777 | Accuracy: 0.8714
+14/11/2026 09:08:26 >> ============================================================
